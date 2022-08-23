@@ -1,0 +1,43 @@
+[
+	{
+	"tipo":"handRoll",
+	"nombre":"HandRoll-Pollo",
+	"ingredientes":["Pollo","Queso","Cebollin"],
+	"precio": "2500",
+	"imagenURL":"https://sushikoidelivery.cl/wp-content/uploads/2021/05/WhatsApp-Image-2021-08-23-at-05.05.32.jpeg"
+	},
+	{
+	"tipo":"handRoll",
+	"nombre":"HandRoll-Camaron",
+	"ingredientes":["Camaron","Queso","Cebollin"],
+	"precio": "2500",
+	"imagenURL":"https://sushikoidelivery.cl/wp-content/uploads/2021/05/WhatsApp-Image-2021-08-23-at-05.05.32.jpeg"
+	},
+	{
+	"tipo":"handRoll",
+	"nombre":"HandRoll-Carne",
+	"ingredientes":["Carne","Queso","Cebollin"],
+	"precio": "2500",
+	"imagenURL":"https://sushikoidelivery.cl/wp-content/uploads/2021/05/WhatsApp-Image-2021-08-23-at-05.05.32.jpeg"
+	},
+	{
+	"tipo":"handRoll",
+	"nombre":"HandRoll-Veggie",
+	"ingredientes":["Veggie","Queso","Cebollin"],
+	"precio": "2500",
+	"imagenURL":"https://sushikoidelivery.cl/wp-content/uploads/2021/05/WhatsApp-Image-2021-08-23-at-05.05.32.jpeg"
+	}
+
+	{
+	"tipo":"Rolls",
+	"nombre":"California",
+	"ingredientes":["pollo","Queso","Cebollin"],
+	"precio": "7500",
+	"imagenURL":"https://sushikoidelivery.cl/wp-content/uploads/2021/05/WhatsApp-Image-2021-08-23-at-05.05.32.jpeg"
+	}
+
+
+]
+
+
+
