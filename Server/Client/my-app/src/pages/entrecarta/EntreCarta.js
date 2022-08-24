@@ -1,3 +1,9 @@
+import "./entreCarta.css"
+
+import ImagenesEntre from "./2.jpg"
+
 export function EntreCarta(){
-    return <h1>IMG</h1>
+    return <div>
+        <img src={ImagenesEntre}/>
+    </div>
 }

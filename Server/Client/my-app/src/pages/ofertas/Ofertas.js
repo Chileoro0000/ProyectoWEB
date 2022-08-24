@@ -1,12 +1,43 @@
-export function Ofertas(){
+import "./ofertas.css"
+import producto1 from "./3.jpg"
+
+export function Ofertas() {
     return <div>
-        <h2>Ofertas</h2>
-        <div>
-            <ul>
-                <li>Oferta 1</li>
-                <li>Oferta 2</li>
-                <li>Oferta 3</li>
-            </ul>
+        <h2 id="TextoOfertas">Ofertas</h2>
+        <div className="Plano">
+            <div className="contenido">
+                <figure>
+                    <img className="ImagenProducto" src={producto1} />
+                </figure>
+                <div>
+                    <h3>Nombre Producto</h3>
+                    <p>Descripcion</p>
+                    <a className="BotonComprar" href="#">Comprar</a>
+                </div>
+
+            </div>
+            <div className="contenido">
+                <figure>
+                    <img className="ImagenProducto" src={producto1} />
+                </figure>
+                <div>
+                    <h3>Nombre Producto</h3>
+                    <p>Descripcion</p>
+                    <a className="BotonComprar" href="#">Comprar</a>
+                </div>
+
+            </div>
+            <div className="contenido">
+                <figure>
+                    <img className="ImagenProducto" src={producto1} />
+                </figure>
+                <div>
+                    <h3>Nombre Producto</h3>
+                    <p>Descripcion</p>
+                    <a className="BotonComprar" href="#">Comprar</a>
+                </div>
+
+            </div>
         </div>
     </div>
 }
