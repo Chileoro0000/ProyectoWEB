@@ -1,42 +1,28 @@
 [
 	{
-	"tipo":"handRoll",
-	"nombre":"HandRoll-Pollo",
-	"ingredientes":["Pollo","Queso","Cebollin"],
-	"precio": "2500",
-	"imagenURL":"https://sushikoidelivery.cl/wp-content/uploads/2021/05/WhatsApp-Image-2021-08-23-at-05.05.32.jpeg"
+	"nombre":"120 Piezas Mixtas",
+	"descripcion":["10 Philadelphia","10 Sake Roll","10 Avocado"],
+	"precio": "28990",
+	"imagenURL":"https://tofuu.getjusto.com/orioneat-prod/fjzscSzZyeC5FWPvg-56%20mix.jpeg"
 	},
 	{
-	"tipo":"handRoll",
-	"nombre":"HandRoll-Camaron",
-	"ingredientes":["Camaron","Queso","Cebollin"],
-	"precio": "2500",
-	"imagenURL":"https://sushikoidelivery.cl/wp-content/uploads/2021/05/WhatsApp-Image-2021-08-23-at-05.05.32.jpeg"
+	"nombre":"120 Piezas Mixtas",
+	"descripcion":["10 Philadelphia","10 Sake Roll","10 Avocado"],
+	"precio": "28990",
+	"imagenURL":"https://tofuu.getjusto.com/orioneat-prod/fjzscSzZyeC5FWPvg-56%20mix.jpeg"
 	},
 	{
-	"tipo":"handRoll",
-	"nombre":"HandRoll-Carne",
-	"ingredientes":["Carne","Queso","Cebollin"],
-	"precio": "2500",
-	"imagenURL":"https://sushikoidelivery.cl/wp-content/uploads/2021/05/WhatsApp-Image-2021-08-23-at-05.05.32.jpeg"
+	"nombre":"120 Piezas Mixtas",
+	"descripcion":["10 Philadelphia","10 Sake Roll","10 Avocado"],
+	"precio": "28990",
+	"imagenURL":"https://tofuu.getjusto.com/orioneat-prod/fjzscSzZyeC5FWPvg-56%20mix.jpeg"
 	},
 	{
-	"tipo":"handRoll",
-	"nombre":"HandRoll-Veggie",
-	"ingredientes":["Veggie","Queso","Cebollin"],
-	"precio": "2500",
-	"imagenURL":"https://sushikoidelivery.cl/wp-content/uploads/2021/05/WhatsApp-Image-2021-08-23-at-05.05.32.jpeg"
+	"nombre":"120 Piezas Mixtas",
+	"descripcion":["10 Philadelphia","10 Sake Roll","10 Avocado"],
+	"precio": "28990",
+	"imagenURL":"https://tofuu.getjusto.com/orioneat-prod/fjzscSzZyeC5FWPvg-56%20mix.jpeg"
 	}
-
-	{
-	"tipo":"Rolls",
-	"nombre":"California",
-	"ingredientes":["pollo","Queso","Cebollin"],
-	"precio": "7500",
-	"imagenURL":"https://sushikoidelivery.cl/wp-content/uploads/2021/05/WhatsApp-Image-2021-08-23-at-05.05.32.jpeg"
-	}
-
-
 ]
 
 

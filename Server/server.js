@@ -27,6 +27,7 @@ app.get('/productos', async (req, res) => {
 	}
 })
 
-app.listen(5005, () => console.log("Servidor levantado"))
 
+
+app.listen(5005, () => console.log("Servidor levantado"))
 
