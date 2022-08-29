@@ -1,0 +1,20 @@
+#TextoCarta{
+    text-align: center;
+}
+
+.Productos-card{
+    display: inline;
+    width: 30%;
+    margin: 5%;
+}
+
+.NombreProducto{
+    font-size: 1rem;
+}
+
+.ImagenProducto{
+    width: 10rem;
+}
+
+
+

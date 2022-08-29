@@ -1,2 +1,0 @@
-# ProyectoWEB
-Proyecto web MERN
