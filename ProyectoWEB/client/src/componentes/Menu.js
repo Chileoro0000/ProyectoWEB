@@ -1,16 +1,18 @@
 import "./menu.css"
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom"
 
-export function Menu(){
+export function Menu() {
     return <header>
-        <nav className="Menu">
-            <ul className="Menu">
-                <li className="Lista"><a href="#">Carro</a></li>
-                <li className="Lista"><Link to="/">Inicio</Link></li>
-                <li className="Lista"><Link to="/Carta">Carta</Link></li>
-                <li className="Lista"><Link to="/SobreNosotros">Sobre Nosotros</Link></li>
-                <li id="Logo">Fukusuke</li>
-            </ul>
+        <nav id='menu'>
+            <input type='checkbox' id='responsive-menu' onclick='updatemenu()'/><label></label>
+                <ul>
+                    <li><Link to="/">Inicio</Link></li>
+                    <li><Link to="/Carta">Carta</Link></li>
+                    <li><Link to="/SobreNosotros">Sobre Nosotros</Link></li>
+                    <li><Link to="/Login">Iniciar sesion</Link></li>
+                    <li><Link to="/Register">Registrarse</Link></li>
+                    <li id="LOGO">FukuSuke</li>
+                </ul>
         </nav>
     </header>
-  }
+}

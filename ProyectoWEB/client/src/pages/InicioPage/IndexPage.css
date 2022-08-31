@@ -4,7 +4,12 @@
     text-align: center;
 }
 
-#ImagenEntre{
-    width: 120rem;
-    height: 28rem;
+.ImagenEntre{
+    padding: 0%;
+}
+
+.img-container{
+    height: 70%;
+    position: relative;
+    background-size: cover;
 }

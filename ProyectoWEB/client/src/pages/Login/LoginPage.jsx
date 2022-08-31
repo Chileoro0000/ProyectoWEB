@@ -1,5 +1,5 @@
 import { Menu } from "../../componentes/Menu"
-import { Login } from "../../componentes/Login"
+import Login from "../../componentes/Login"
 
 const LoginPage = () =>{
     return (
