@@ -55,8 +55,8 @@ export const Register = () => {
     return (
         <>
             <div >
-                <h2>Registro</h2>
                 <form onSubmit={(e) => onSubmit(e)}>
+                    <h2>Registro</h2>
                     <div >
                         <div >
                             <label htmlFor="nombre">Nombre</label>

@@ -47,6 +47,7 @@ app.get('/promos', async (req, res) => {
 })
 
 
+
 const PORT = 5005;
 app.listen(PORT, () => {
   console.log(`Servidor funcionando... hhtps://LocalHost ${PORT}`);

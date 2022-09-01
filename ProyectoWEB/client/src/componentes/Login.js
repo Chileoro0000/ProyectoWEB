@@ -48,9 +48,9 @@ export const Login = () => {
 
     return (
         <>
-            <div >
-                <h2>Iniciar sesion</h2>
+            <div >     
                 <form onSubmit={(e) => onSubmit(e)}>
+                    <h2>Iniciar sesion</h2>
                     <div >
                         <div >
                             <label htmlFor="correo">Correo</label>

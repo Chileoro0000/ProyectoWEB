@@ -54,6 +54,7 @@ header{
 #menu li a:hover {
 	color: #000000;
 	background: #F2F2F2;
+	border-radius: 7px;
 }
 #menu input {
 	display: none;

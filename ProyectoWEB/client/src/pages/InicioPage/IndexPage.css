@@ -4,12 +4,7 @@
     text-align: center;
 }
 
-.ImagenEntre{
-    padding: 0%;
+#ImagenEntre{
+    width: 100%;
 }
 
-.img-container{
-    height: 70%;
-    position: relative;
-    background-size: cover;
-}
