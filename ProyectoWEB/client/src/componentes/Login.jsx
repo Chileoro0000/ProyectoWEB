@@ -1,20 +1,15 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom";
-import "./Register.css"
 
-export const Register = () => {
-    const axios = require('axios');
-    const [inputs, setInputs] = useState({
-        correo: "",
-        nombre: "",
-        contraseña: "",
-    });
+export const Login = () => {
+    const axios = require("axios")
+    const [inputs, setInputs] = useState({ correo: "", contraseña: "" });
     const [mensaje, setMensaje] = useState();
     const [loading, setLoading] = useState(false);
 
     const navigate = useNavigate();
 
-    const { nombre, contraseña, correo } = inputs;
+    const { correo, contraseña } = inputs;
 
     const HandleChange = (e) => {
         setInputs({ ...inputs, [e.target.name]: e.target.value });
@@ -22,56 +17,40 @@ export const Register = () => {
 
     const onSubmit = async (e) => {
         e.preventDefault();
-        if (nombre !== "" && contraseña !== "" && correo !== "") {
+        if (correo !== "" && contraseña !== "") {
             const Usuario = {
-                nombre,
                 correo,
                 contraseña,
             };
             setLoading(true);
             await axios
-                .post("http://localhost:5005/register", Usuario)
+                .post("http://localhost:5005/login", Usuario)
                 .then((res) => {
                     const { data } = res;
                     setMensaje(data.mensaje);
-                    setInputs({ nombre: "", contraseña: "", correo: "" });
                     setTimeout(() => {
                         setMensaje("");
-                        navigate("/login");
+                        localStorage.setItem("token", data?.usuario.token);
+                        navigate(`/`);
                     }, 1500);
                 })
                 .catch((error) => {
                     console.error(error);
-                    setMensaje("Hubo un error");
+                    setMensaje("Correo u contraseña incorrecta");
                     setTimeout(() => {
                         setMensaje("");
                     }, 1500);
                 });
-
+            setInputs({ correo: "", contraseña: "" });
             setLoading(false);
         }
     };
 
     return (
         <>
-            <div >
+            <div className="ContainerLogin">     
                 <form onSubmit={(e) => onSubmit(e)}>
-                    <h2>Registro</h2>
-                    <div >
-                        <div >
-                            <label htmlFor="nombre">Nombre</label>
-                            <input
-                                onChange={(e) => HandleChange(e)}
-                                value={nombre}
-                                name="nombre"
-                                id="nombre"
-                                type="text"
-                                placeholder="Nombre..."
-                                autoComplete="off"
-                            />
-                        </div>
-                    </div>
-
+                    <h2>Iniciar sesion</h2>
                     <div >
                         <div >
                             <label htmlFor="correo">Correo</label>
@@ -101,13 +80,12 @@ export const Register = () => {
                             />
                         </div>
                     </div>
-
                     <button type="submit">
-                        {loading ? "Cargando..." : "Registrarme"}
+                        {loading ? "Cargando..." : "Iniciar Sesión"}
                     </button>
                     <p>
-                        Ya tienes una cuenta?{" "}
-                        <b onClick={() => navigate("/login")}>Iniciar Sesión</b>
+                        Aun no tienes cuenta?{" "}
+                        <b onClick={() => navigate("/register")}>Registrate!</b>
                     </p>
                 </form>
             </div>
@@ -116,5 +94,5 @@ export const Register = () => {
     )
 }
 
-export default Register
+export default Login
 

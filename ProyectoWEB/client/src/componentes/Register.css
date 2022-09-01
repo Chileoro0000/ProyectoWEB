@@ -32,7 +32,7 @@ form input[type = "text"]:focus, form input[type = "password"]:focus, form input
 }
 
 button {
-    padding: 1.3em 3em;
+    padding: 2.3em 3em;
     font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 2.5px;
@@ -47,4 +47,6 @@ button {
     outline: none;
   }
 
-
+.ContainerLogin{
+    width: 100%;
+}

@@ -2,6 +2,7 @@ import { useState } from "react"
 import { Link } from "react-router-dom"
 import "./CartaPage.css"
 import { Menu } from "../../componentes/Menu"
+import { Footer } from "../../componentes/Footer"
 
 
 const CartaPage = () => {
@@ -37,6 +38,7 @@ const CartaPage = () => {
                     </div></div>
                 )
             })}
+            <Footer/>
         </div>
     )
 }

@@ -1,15 +1,20 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom";
+import "./Register.css"
 
-export const Login = () => {
-    const axios = require("axios")
-    const [inputs, setInputs] = useState({ correo: "", contraseña: "" });
+export const Register = () => {
+    const axios = require('axios');
+    const [inputs, setInputs] = useState({
+        correo: "",
+        nombre: "",
+        contraseña: "",
+    });
     const [mensaje, setMensaje] = useState();
     const [loading, setLoading] = useState(false);
 
     const navigate = useNavigate();
 
-    const { correo, contraseña } = inputs;
+    const { nombre, contraseña, correo } = inputs;
 
     const HandleChange = (e) => {
         setInputs({ ...inputs, [e.target.name]: e.target.value });
@@ -17,40 +22,56 @@ export const Login = () => {
 
     const onSubmit = async (e) => {
         e.preventDefault();
-        if (correo !== "" && contraseña !== "") {
+        if (nombre !== "" && contraseña !== "" && correo !== "") {
             const Usuario = {
+                nombre,
                 correo,
                 contraseña,
             };
             setLoading(true);
             await axios
-                .post("http://localhost:5005/login", Usuario)
+                .post("http://localhost:5005/register", Usuario)
                 .then((res) => {
                     const { data } = res;
                     setMensaje(data.mensaje);
+                    setInputs({ nombre: "", contraseña: "", correo: "" });
                     setTimeout(() => {
                         setMensaje("");
-                        localStorage.setItem("token", data?.usuario.token);
-                        navigate(`/`);
+                        navigate("/login");
                     }, 1500);
                 })
                 .catch((error) => {
                     console.error(error);
-                    setMensaje("Correo u contraseña incorrecta");
+                    setMensaje("Hubo un error");
                     setTimeout(() => {
                         setMensaje("");
                     }, 1500);
                 });
-            setInputs({ correo: "", contraseña: "" });
+
             setLoading(false);
         }
     };
 
     return (
         <>
-            <div >     
+            <div className="ContainerLogin">
                 <form onSubmit={(e) => onSubmit(e)}>
-                    <h2>Iniciar sesion</h2>
+                    <h2>Registro</h2>
+                    <div >
+                        <div >
+                            <label htmlFor="nombre">Nombre</label>
+                            <input
+                                onChange={(e) => HandleChange(e)}
+                                value={nombre}
+                                name="nombre"
+                                id="nombre"
+                                type="text"
+                                placeholder="Nombre..."
+                                autoComplete="off"
+                            />
+                        </div>
+                    </div>
+
                     <div >
                         <div >
                             <label htmlFor="correo">Correo</label>
@@ -80,12 +101,13 @@ export const Login = () => {
                             />
                         </div>
                     </div>
+
                     <button type="submit">
-                        {loading ? "Cargando..." : "Iniciar Sesión"}
+                        {loading ? "Cargando..." : "Registrarme"}
                     </button>
                     <p>
-                        Aun no tienes cuenta?{" "}
-                        <b onClick={() => navigate("/")}>Registrate!</b>
+                        Ya tienes una cuenta?{" "}
+                        <b onClick={() => navigate("/login")}>Iniciar Sesión</b>
                     </p>
                 </form>
             </div>
@@ -94,5 +116,5 @@ export const Login = () => {
     )
 }
 
-export default Login
+export default Register
 

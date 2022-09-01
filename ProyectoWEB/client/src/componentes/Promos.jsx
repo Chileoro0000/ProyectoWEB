@@ -11,7 +11,6 @@ export function Promos() {
     LoadPromos()
     return (
         <div>
-            <h2 id="TextoCarta">Carta</h2>
             {Promos.map(eachPromos => {
                 return (
                       <div className="card">
