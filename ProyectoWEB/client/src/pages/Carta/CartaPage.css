@@ -1,17 +1,21 @@
 #textoCarta{
+    font-size: 50px;
     padding: 5px;
     text-align: center;
     border-radius: 200px;
-    background-color: rgb(235, 217, 217);
+    background-color: rgb(255, 255, 255);
 }
 .descContain{
     background-color: white;
     display: inline;
-    text-align: ;
 }
 
 .cardButton{ 
     text-align: right;
+}
+
+#IMGproducto{
+    width: 100%;
 }
 
 .imgProducto{
@@ -21,15 +25,13 @@
     border-radius: 20px;
     background-color: beige;
     padding: 10px;
-    
-    
 }
 .svg-icon{
     height: 30px;
-    border-radius: 50px;
+    border-radius: 40px;
     border: 1px solid #252525;
     cursor: pointer;
-    padding: 10px;
+    padding: 2px;
 }
 
 #carta{
@@ -49,6 +51,7 @@
     display: flex;
     padding: 10px 15px 5px 250px;
 }
+
 
 
 

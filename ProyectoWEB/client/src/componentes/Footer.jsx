@@ -1,16 +1,13 @@
-import "./Footer.css"
+import { Link } from "react-router-dom"
 
 export function Footer() {
     return <div>
-        <footer>
-            <h3>FUKOSUKE</h3>
-            <p>Nos encontramos ubicados en Maipu</p>
-            <p>Numero de contactos: +569 09827213</p>
-            <ul className="contactos">
-                <li>Facebook</li>
-                <li>Whastapp</li>
-                <li>Instagram</li>
-            </ul>
-        </footer>
+        <footer id="position">
+                <section>
+                    <Link to="/">Inicio</Link>
+                    <a class="correo" href="mailto:henriquez096jn@gmail.com">¿ Estas interesado en trabajar con nosotros? Contactanos aquí</a>
+                </section>
+                <p>Todos los derechos reservados. Copyright 2022</p>
+            </footer>
     </div>
 }
