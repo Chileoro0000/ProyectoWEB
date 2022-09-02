@@ -8,7 +8,6 @@ const IndexPage = () =>{
         <div>
             <Menu/>
             <img id="ImagenEntre"src={ImagenesEntre}/>
-            <h2 id="TextoOfertas">Ofertas</h2>
             <Promos/>
             <Footer/>
         </div>

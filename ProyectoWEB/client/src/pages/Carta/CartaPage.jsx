@@ -15,8 +15,9 @@ const CartaPage = () => {
 
     LoadProductos()
     return (
-        <div>
-            <Menu/>
+      <div>
+        <Menu/>
+      <div className="ContainerOfertas">
             <h2 id="TextoCarta">Carta</h2>
             {Productos.map(eachProducto => {
                 return (
@@ -38,7 +39,8 @@ const CartaPage = () => {
                     </div></div>
                 )
             })}
-            <Footer/>
+        </div>
+        <Footer/>
         </div>
     )
 }

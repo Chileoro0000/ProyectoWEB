@@ -1,7 +1,7 @@
-import { Link } from "react-router-dom"
 import { useState } from "react"
-export function Promos() {
-    
+import "./Promos.css"
+
+export function Promos() {    
     const [ Promos, setPromos ] = useState([])
     const LoadPromos  = () => {
         fetch("http://localhost:5005/promos")
@@ -10,11 +10,13 @@ export function Promos() {
     }
     LoadPromos()
     return (
-        <div>
+        <div className="ContainerOfertas">
+          <h2 id="OfertasText">Ofertas</h2>
             {Promos.map(eachPromos => {
                 return (
+                  <div>
                       <div className="card">
-                      <div className="card-img">{(eachPromos.imagenURL)}</div>
+                      <div className="card-img">{}</div>
                       <div className="card-info">
                         <p className="text-title">{eachPromos.nombre}</p>
                         <p className="text-body">{eachPromos.tipo}</p>
@@ -29,6 +31,7 @@ export function Promos() {
                         </svg>
                       </div>
                     </div></div>
+                    </div>
                 )
             })}
         </div>

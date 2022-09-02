@@ -7,7 +7,6 @@ const LoginPage = () =>{
         <div>
             <Menu/>
             <Login/>
-            <Footer/>
         </div>
     )
 }
