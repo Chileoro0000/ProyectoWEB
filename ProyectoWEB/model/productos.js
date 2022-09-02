@@ -7,7 +7,8 @@ const productosSchema = new Schema({
 	tipo: String,
 	nombre: String,
 	ingredientes: Array,
-	imagenURL: String
+	imagenURL: String,
+	EnCarro: {type: Boolean, default: false}
 })
 
 
