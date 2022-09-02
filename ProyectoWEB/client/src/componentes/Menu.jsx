@@ -3,6 +3,7 @@ import { Link } from "react-router-dom"
 
 export function Menu() {
     return <header>
+        <h3 id="LOGO">FukuSuke</h3>
         <nav id='menu'>
             <input type='checkbox' id='responsive-menu' onclick='updatemenu()'/><label></label>
                 <ul>
@@ -11,8 +12,9 @@ export function Menu() {
                     <li><Link to="/SobreNosotros">Sobre Nosotros</Link></li>
                     <li><Link to="/Login">Iniciar sesion</Link></li>
                     <li><Link to="/Register">Registrarse</Link></li>
-                    <li id="LOGO">FukuSuke</li>
+                    
                 </ul>
+                
         </nav>
     </header>
 }

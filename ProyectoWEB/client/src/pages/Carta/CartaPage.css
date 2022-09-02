@@ -1,4 +1,62 @@
-.card {
+#textoCarta{
+    padding: 5px;
+    text-align: center;
+    border-radius: 200px;
+    background-color: rgb(235, 217, 217);
+}
+.descContain{
+    background-color: white;
+    display: inline;
+    text-align: ;
+}
+
+.cardButton{ 
+    text-align: right;
+}
+
+.imgProducto{
+    visibility: unset;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 20px;
+    background-color: beige;
+    padding: 10px;
+    
+    
+}
+.svg-icon{
+    height: 30px;
+    border-radius: 50px;
+    border: 1px solid #252525;
+    cursor: pointer;
+    padding: 10px;
+}
+
+#carta{
+    width: 200px;
+    height: 250px;
+    padding: .8em;
+    margin: .8em;
+    border-style: solid;
+    border-radius: 20px;
+    background: #f5f5f5;
+    position: relative;
+    overflow: visible;
+    /* box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); */
+}
+
+.ContainerOfertas{
+    display: flex;
+    padding: 10px 15px 5px 250px;
+}
+
+
+
+
+
+
+
+/* .card {
     width: 190px;
     height: 254px;
     padding: .8em;
@@ -63,5 +121,5 @@
     border: 1px solid #ffcaa6;
     background-color: #ffcaa6;
    }
-   
+    */
 

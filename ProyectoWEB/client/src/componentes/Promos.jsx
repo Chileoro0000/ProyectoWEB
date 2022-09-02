@@ -14,6 +14,7 @@ export function Promos() {
           <h2 id="OfertasText">Ofertas</h2>
             {Promos.map(eachPromos => {
                 return (
+                  
                   <div>
                       <div className="card">
                       <div className="card-img">{}</div>

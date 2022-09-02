@@ -7,7 +7,16 @@ body{
 header{
     background-color: black;
     color: white;
-    padding: 0.3rem 0.2rem;
+    padding: 10px;
+	clear:both;
+	margin: 10p;
+}
+
+#LOGO {
+	float: right;
+	color: #FFFFFF;
+	font-size: 30px;
+	padding-right: 50px;
 }
 
 #menu {
@@ -15,7 +24,7 @@ header{
 	color: #FFF;
 	height: 53px;
 	padding-left: 18px;
-	border-radius: 0px;
+	border-radius: 10px;
 }
 #menu ul, #menu li {
 	margin: 0 auto;
@@ -36,17 +45,10 @@ header{
 	padding: 0 14px;
 	text-decoration: none;
 	color: #FFFFFF;
-	font-size: 16px;
+	font-size: 20px;
 }
 
-#LOGO {
-	display: block;
-	line-height: 53px;
-	padding: 0 20px;
-	text-decoration: none;
-	color: #FFFFFF;
-	font-size: 16px;
-}
+
 
 #menu a.dropdown-arrow:after {
 	content: "\25BE";
@@ -114,7 +116,3 @@ header{
 	#menu input:checked + label:before {content:"\00d7"}
 	#menu input:checked ~ ul {display:block}
 }
-.lOGO{
-    left: 75%;
-}
-
