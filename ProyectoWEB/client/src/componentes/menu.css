@@ -48,6 +48,16 @@ header{
 	font-size: 20px;
 }
 
+#menu #CerrarSesion {
+	display: block;
+	line-height: 53px;
+	padding: 0 14px;
+	text-decoration: none;
+	color: #FFFFFF;
+	font-size: 20px;
+}
+
+
 
 
 #menu a.dropdown-arrow:after {

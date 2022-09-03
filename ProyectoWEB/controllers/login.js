@@ -20,7 +20,7 @@ const login = async (req, res) => {
         };
 
         const token = jwt.sign(data, "secreto", {
-          expiresIn: 86400 /* 24hs */,
+          expiresIn: 86400,
         });
 
         res.json({
