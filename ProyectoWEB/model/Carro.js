@@ -10,5 +10,5 @@ const CarroSchema = new Schema({
 })
 
 //Se crea un modelo
-const Carro = mongoose.model("Carro", ofertasSchema)
+const Carro = mongoose.model("Carro", CarroSchema)
 module.exports = Carro

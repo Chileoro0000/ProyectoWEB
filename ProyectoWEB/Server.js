@@ -20,9 +20,16 @@ app.use(express.json());
 app.use(cors());
 
 //Ruteos
+//Usuario
 app.get("/user", verifyToken, controllers.getUserById);
 app.post("/register", controllers.register);
 app.post("/login", controllers.login);
+
+//Carro
+app.get("/productos-carro", controllers.GetProductCart);
+app.post("/productos-carro", controllers.AddProductCart);
+app.put("/productos-carro/:productId", controllers.PutProduct);
+app.delete("/productos-carro/:productId", controllers.DeleteProduct);
 
 app.get('/productos', async (req, res) => {
 
@@ -45,8 +52,6 @@ app.get('/promos', async (req, res) => {
     console.log(error)
   }
 })
-
-
 
 const PORT = 5005;
 app.listen(PORT, () => {
