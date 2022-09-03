@@ -10,7 +10,9 @@ const IndexPage = () =>{
             <Menu/>
             <img id="ImagenEntre" src={ImagenesEntre}/>
             <Promos/>
-            <Footer/>
+            <div id="foot">
+                <Footer/>
+            </div>
         </div>
     )
 }
