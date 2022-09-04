@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom";
+import "./Login.css"
 
 export const Login = () => {
     const axios = require("axios")
@@ -89,7 +90,7 @@ export const Login = () => {
                     </p>
                 </form>
             </div>
-            {mensaje && <div >{mensaje}</div>}
+            {mensaje && <div id="MensajeLogin">{mensaje}</div>}
         </>
     )
 }

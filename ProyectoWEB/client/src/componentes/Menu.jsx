@@ -17,40 +17,47 @@ export function Menu() {
                         token: token,
                     },
                 })
-                .then(({data}) => setName(data.nombre))
+                .then(({ data }) => setName(data.nombre))
                 .catch((error) => console.error(error));
         }
     }, [token]);
 
-    if (token){
+    const handleLogout = () => {
+        localStorage.removeItem("token")
+    }
+
+    if (token) {
         return <header>
-        <h3 id="LOGO">FukuSuke</h3>
-        <nav id='menu'>
-            <input type='checkbox' id='responsive-menu' onclick='updatemenu()' /><label></label>
-            <ul>
-                <li><Link to="/">Inicio</Link></li>
-                <li><Link to="/Carta">Carta</Link></li>
-                <li><Link to="/SobreNosotros">Sobre Nosotros</Link></li>
-                <li><Link to="/Perfil">Cerrar Sesion</Link></li>
-                <li><Link to="/Perfil">Mi perfil</Link></li>
-            </ul>
-        </nav>
-    </header>
+            <h3 id="LOGO">FukuSuke</h3>
+            <nav id='menu'>
+                <input type='checkbox' id='responsive-menu' onclick='updatemenu()' /><label></label>
+                <ul>
+                    <li><Link to="/">Inicio</Link></li>
+                    <li><Link to="/Carta">Carta</Link></li>
+                    <li><Link to="/SobreNosotros">Sobre Nosotros</Link></li>
+                    <li><Link to="/Login"><button id="BotonCerrar" onClick={handleLogout} >
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <span class="front text"> Cerrar sesion
+                        </span>
+                    </button></Link></li>
+                </ul>
+            </nav>
+        </header>
     } else {
         return <header>
-        <h3 id="LOGO">FukuSuke</h3>
-        <nav id='menu'>
-            <input type='checkbox' id='responsive-menu' onclick='updatemenu()' /><label></label>
-            <ul>
-                <li><Link to="/">Inicio</Link></li>
-                <li><Link to="/Carta">Carta</Link></li>
-                <li><Link to="/SobreNosotros">Sobre Nosotros</Link></li>
-                <li><Link to="/Login">Iniciar sesion</Link></li>
-                <li><Link to="/Register">Registrarse</Link></li>
-            </ul>
-        </nav>
-    </header>
-
+            <h3 id="LOGO">FukuSuke</h3>
+            <nav id='menu'>
+                <input type='checkbox' id='responsive-menu' onclick='updatemenu()' /><label></label>
+                <ul>
+                    <li><Link to="/">Inicio</Link></li>
+                    <li><Link to="/Carta">Carta</Link></li>
+                    <li><Link to="/SobreNosotros">Sobre Nosotros</Link></li>
+                    <li><Link to="/Login">Iniciar sesion</Link></li>
+                    <li><Link to="/Register">Registrarse</Link></li>
+                </ul>
+            </nav>
+        </header>
     }
-    
+
 }
