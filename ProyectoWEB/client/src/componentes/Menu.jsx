@@ -35,6 +35,7 @@ export function Menu() {
                     <li><Link to="/">Inicio</Link></li>
                     <li><Link to="/Carta">Carta</Link></li>
                     <li><Link to="/SobreNosotros">Sobre Nosotros</Link></li>
+                    <li><Link to="/Perfil">Perfil</Link></li>
                     <li><Link to="/Login"><button id="BotonCerrar" onClick={handleLogout} >
                         <span class="shadow"></span>
                         <span class="edge"></span>

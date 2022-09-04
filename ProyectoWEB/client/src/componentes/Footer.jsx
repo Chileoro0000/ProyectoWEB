@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom"
+import "./Footer.css"
 
 export function Footer() {
-    return <div>
+    return <div className="DivFooter">
         <footer id="position">
                 <section>
                     <Link to="/">Inicio</Link>

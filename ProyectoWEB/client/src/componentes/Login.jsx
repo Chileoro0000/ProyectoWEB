@@ -49,7 +49,7 @@ export const Login = () => {
 
     return (
         <>
-            <div className="ContainerLogin">     
+            <div className="ContainerLogin">
                 <form onSubmit={(e) => onSubmit(e)}>
                     <h2>Iniciar sesion</h2>
                     <div >
@@ -90,9 +90,9 @@ export const Login = () => {
                     </p>
                 </form>
             </div>
-            {mensaje && <div id="MensajeLogin">{mensaje}</div>}
+            {mensaje && <div id="MensajeLogin">{mensaje}</div>} 
         </>
-    )
+    ) //Modificar mensaje de login porfis
 }
 
 export default Login
