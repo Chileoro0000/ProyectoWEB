@@ -41,6 +41,7 @@ const CartaPage = () => {
               )
           })}
         </div>
+        <Footer/>
       </div>
     )
 }

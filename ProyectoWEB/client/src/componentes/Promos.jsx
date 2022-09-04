@@ -1,6 +1,7 @@
 import { useState } from "react"
 import "./Promos.css"
 import { Menu } from "./Menu"
+import { Footer } from "./Footer"
 export function Promos() {    
     const [ Promos, setPromos ] = useState([])
     const LoadPromos  = () => {
@@ -36,6 +37,7 @@ export function Promos() {
             )
         })}
       </div>
+      <Footer/>
     </div>
     )
 }

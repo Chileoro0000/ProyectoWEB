@@ -6,13 +6,12 @@ import "./IndexPage.css"
 
 const IndexPage = () =>{
     return (
-      <div>
-        <Menu/>
-        <img id="ImagenEntre" src={ImagenesEntre}/>
-        <Promos/>
-        <div id="foot">
+        <div>
+            <Menu/>
+            <img id="ImagenEntre" src={ImagenesEntre}/>
+            <Promos/>
+            
         </div>
-      </div>
     )
 }
 
