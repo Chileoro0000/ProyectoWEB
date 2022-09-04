@@ -29,7 +29,6 @@ div section {
     margin: 1rem 0;
     border-radius: 0.5rem;
     padding: 0.25rem 0;
-    width: 100%;
 }
 div section:hover {
     box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.3);
@@ -41,9 +40,8 @@ div section h1, div section p {
 
 footer {
     background-color: #000;
-    padding: 1em 0;
+    padding: 3rem;
     color: white;
-    text-align: center;
 }
 
 footer section {
@@ -86,33 +84,3 @@ footer a:hover{
 #position {
     position:relative ;
 }
-
-#foot {
-    padding: 0em 0;
-    text-align: justify;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
-
-p {
-    text-align: center;
-}
-
-/* 
- * Always set the map height explicitly to define the size of the div element
- * that contains the map. 
- */
- #map {
-    height: 100%;
-  }
-  
-  /* 
-   * Optional: Makes the sample page fill the window. 
-   */
-  html,
-  body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-  }

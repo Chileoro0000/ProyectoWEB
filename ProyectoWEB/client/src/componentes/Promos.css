@@ -1,11 +1,60 @@
-#OfertasText{
-    text-align: center;
-    position: flex;
+#textoPromo{
+    
+    font-size: 50px;
+    margin: 10px;
+    padding: 5px;
+    padding-left: 175px;
+    text-align: left;
+    border-radius: 200px;
+    background-color: rgb(255, 255, 255);
+}
+.descContain1{
+    background-color: white;
+    display: inline;
 }
 
-.ContainerOfertas{
-    width: 70%;
+.cardButtonPromo{ 
+    text-align: right;
+}
+
+#IMGPromo{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.imgPromo{
+    visibility: unset;
+    border-style: solid;
+    border-width: 0.5px;
+    border-radius: 20px;
+    background-color: white;
+    padding: 10px;
+}
+.svg-icon1{
+    height: 30px;
+    border-radius: 40px;
+    border: 1px solid #252525;
+    cursor: pointer;
+    padding: 2px;
+}
+
+#promo{
+    /* width: 200px;
+    height: 285px; */
+    width: 200px;
+    padding: .8em;
+    margin: .8em;
+    border-style: solid;
+    border-color: black;
+    border-radius: 20px;
+    background: #f5f5f5;
+    box-sizing: border-box;
+    /* box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); */
+}
+
+.contenedorPromos{
     display: flex;
+    padding: 10px 1px 5px 150px;
     flex-wrap: wrap;
 }
 

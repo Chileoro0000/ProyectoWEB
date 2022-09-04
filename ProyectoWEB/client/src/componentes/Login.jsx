@@ -1,6 +1,5 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom";
-import "./Login.css"
 
 export const Login = () => {
     const axios = require("axios")
@@ -49,7 +48,7 @@ export const Login = () => {
 
     return (
         <>
-            <div className="ContainerLogin">
+            <div className="ContainerLogin">     
                 <form onSubmit={(e) => onSubmit(e)}>
                     <h2>Iniciar sesion</h2>
                     <div >
@@ -90,9 +89,9 @@ export const Login = () => {
                     </p>
                 </form>
             </div>
-            {mensaje && <div id="MensajeLogin">{mensaje}</div>} 
+            {mensaje && <div >{mensaje}</div>}
         </>
-    ) //Modificar mensaje de login porfis
+    )
 }
 
 export default Login
