@@ -55,7 +55,7 @@ export const Register = () => {
     return (
         <>
             <div className="ContainerLogin">
-                <form onSubmit={(e) => onSubmit(e)}>
+                <form className="FormRegister" onSubmit={(e) => onSubmit(e)}>
                     <h2>Registro</h2>
                     <div >
                         <div >

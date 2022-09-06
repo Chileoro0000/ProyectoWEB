@@ -1,0 +1,45 @@
+
+.ContainertextPerfil{
+    margin: 0%;
+    font-size: 30px;
+    padding-left: 1%;
+    border-style: solid;
+    border-color: #FDB273 ;
+    background-color: #FDB273;
+}
+
+.ContainertextPerfil h2{
+    color: white;
+}
+
+.listIzquierda{
+    list-style: none;   
+}
+
+.listIzquierda li{
+    color: black;
+    font-size: 30px;
+    padding-left: 10px;
+
+}
+
+.listIzquierda h3{
+    font-size: 25px;
+    padding: 10px 10px 10px 10px;
+    background-color: #FDB273;
+    display: inline-flex;
+    background-attachment: fixed;
+    border-radius: 30px;
+    
+    border-style: solid;
+    border-color: #FDB273;
+    color: white;
+}
+.listDerecha{
+    list-style-type: none;
+}
+
+li h3{
+    background-color: #FDB273;
+    size: 20px;
+}

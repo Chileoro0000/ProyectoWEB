@@ -13,7 +13,8 @@ const IndexPage = () => {
             <div className="ContainerPq"><h2 id="TextPq">¿Por que preferirnos?</h2>
                 <p>Somos los mejores sushi de Maipu desde 1998, tenemos historia</p>
             </div>
-            <Footer />
+            <Footer />  
+            
         </div>
     )
 }

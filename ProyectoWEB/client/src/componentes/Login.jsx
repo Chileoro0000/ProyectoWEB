@@ -50,7 +50,7 @@ export const Login = () => {
     return (
         <>
             <div className="ContainerLogin">
-                <form onSubmit={(e) => onSubmit(e)}>
+                <form className="FormRegister" onSubmit={(e) => onSubmit(e)}>
                     <h2>Iniciar sesion</h2>
                     <div >
                         <div >
