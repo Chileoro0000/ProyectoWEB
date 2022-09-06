@@ -7,10 +7,8 @@ import "./PerfilPage.css"
 const PerfilPage = () => {
     return (<>
         <Menu></Menu>
-        <div className="S">
         <Perfil></Perfil>
         <FormUsuario/>
-        </div>
         <Compras/>
     </>
     )

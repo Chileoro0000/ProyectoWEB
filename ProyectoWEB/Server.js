@@ -24,6 +24,8 @@ app.use(cors());
 app.get("/user", verifyToken, controllers.getUserById);
 app.post("/register", controllers.register);
 app.post("/login", controllers.login);
+app.post("/actDatos", controllers.actualizarDatos);
+
 
 //Carro
 app.get("/productos-carro", controllers.GetProductCart);
