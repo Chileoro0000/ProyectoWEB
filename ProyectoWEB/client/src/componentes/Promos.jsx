@@ -13,7 +13,7 @@ export function Promos() {
     return (
       <div>
       <br></br>
-      <h2 id="textoPromo">Promos</h2>
+      <h2 id="textoPromo">PROMOS</h2>
       <div className="contenedorPromos">
         {Promos.map(eachPromo => {
           return (
@@ -37,7 +37,7 @@ export function Promos() {
             )
         })}
       </div>
-      <Footer/>
+      
     </div>
     )
 }

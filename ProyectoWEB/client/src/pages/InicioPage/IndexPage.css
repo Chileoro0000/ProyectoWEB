@@ -15,3 +15,14 @@
     bottom: 0;
     width: 100%;
 }
+#TextPq{
+    text-align: center;
+}
+
+.ContainerPq{
+    border: 5px;
+    border-style: solid;
+    padding: 20px;
+    margin: 20px;
+
+}

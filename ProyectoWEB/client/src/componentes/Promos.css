@@ -1,10 +1,8 @@
 #textoPromo{
-    
+    text-align: center;
     font-size: 50px;
     margin: 10px;
     padding: 5px;
-    padding-left: 175px;
-    text-align: left;
     border-radius: 200px;
     background-color: rgb(255, 255, 255);
 }
@@ -38,9 +36,7 @@
     padding: 2px;
 }
 
-#promo{
-    /* width: 200px;
-    height: 285px; */
+#promo{ 
     width: 200px;
     padding: .8em;
     margin: .8em;
@@ -54,7 +50,7 @@
 
 .contenedorPromos{
     display: flex;
-    padding: 10px 1px 5px 150px;
+    padding: 10px 1px 80px 150px;
     flex-wrap: wrap;
 }
 

@@ -6,7 +6,6 @@ const PerfilPage = () =>{
         <div>
             <Menu></Menu>
             <Perfil></Perfil>
-            /*Hacer boton que cierre sesion XD */
         </div>
     )
 }

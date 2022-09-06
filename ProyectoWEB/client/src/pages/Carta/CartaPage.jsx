@@ -17,7 +17,7 @@ const CartaPage = () => {
       <div>
         <Menu/>
         <br></br>
-        <h2 id="textoCarta">Carta</h2>
+        <h2 id="textoCarta">CARTA</h2>
         <div className="contenedorCartas">
           {Productos.map(eachProducto => {
             return (

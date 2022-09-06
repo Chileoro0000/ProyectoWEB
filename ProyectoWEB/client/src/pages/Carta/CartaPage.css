@@ -1,10 +1,8 @@
 #textoCarta{
-    
+    text-align: center;
     font-size: 50px;
     margin: 10px;
     padding: 5px;
-    padding-left: 175px;
-    text-align: left;
     border-radius: 200px;
     background-color: rgb(255, 255, 255);
 }
