@@ -12,34 +12,29 @@
     color: white;
 }
 
-.listIzquierda{
+.list{
     list-style: none;   
 }
 
-.listIzquierda li{
+.list li{
     color: black;
     font-size: 30px;
     padding-left: 10px;
 
 }
 
-.listIzquierda h3{
+.list h3{
     font-size: 25px;
     padding: 10px 10px 10px 10px;
+    margin-top: 7px;
     background-color: #FDB273;
     display: inline-flex;
     background-attachment: fixed;
     border-radius: 30px;
-    
     border-style: solid;
     border-color: #FDB273;
     color: white;
 }
-.listDerecha{
+.list{
     list-style-type: none;
-}
-
-li h3{
-    background-color: #FDB273;
-    size: 20px;
 }

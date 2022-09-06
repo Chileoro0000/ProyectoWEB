@@ -28,8 +28,8 @@ export function Perfil() {
         <div className="ContainertextPerfil">
             <h2>Tu perfil</h2>
         </div>
-        <div>
-            <ul className="listIzquierda">
+        <div className="ContainerList">
+            <ul className="list">
                 <li>Nombre</li>
                 <h3>{`${name}`}</h3>
                 <li>Correo</li>

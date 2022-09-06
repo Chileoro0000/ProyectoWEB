@@ -1,27 +1,40 @@
 import "./Footer.css"
+import "./FormUsuario.css"
 
 export function FormUsuario() {
     return <div>
-        <form id="FormDatos" method="post">
-                <ul>
-                    <li>
-                        <label for="name">Rut</label>
-                        <input type="text" id="name" />
-                    </li>
-                    <li>
-                        <label for="mail">Telefono</label>
-                        <input type="email" id="mail" />
-                    </li>
-                    <li>
-                        <label for="msg">Dirrecion</label>
-                        <input type="email" id="mail" />
-                    </li>
-                    <li>
-                        <label for="msg">Fecha de nacimiento</label>
-                        <input type="email" id="mail" />
-                    </li>
-                </ul>
-            </form>
+        <form className="formBody" method="post">
+            <h3 className="formTitle">Formulario de usuario</h3>
+            <div className="formContainer">
+                <div className="grupo">
+                    <input type="text" id="rut" className="formInput"></input>
+                    <label for="rut"  className="formLabel">Rut</label>
+                    
+
+                </div>
+                <div className="grupo">
+                    
+                    <input type="text" id="telefono" className="formInput"></input>
+                    <label for="telefono"  className="formLabel">Telefono</label>
+                </div>
+                <div className="grupo">
+                    
+                    <input type="text" id="mail" className="formInput"></input>
+                    <label for="mail"  className="formLabel">Email</label>
+                </div>
+                <div className="grupo">
+                    
+                    <input type="text" id="direccion" className="formInput"></input>
+                    <label for="direccion"  className="formLabel">Direccion</label>
+                </div>
+                <div className="grupo">
+                    <input type="text" id="nacimiento" className="formInput"></input>
+                    <label for="nacimiento" className="formLabel">Fecha de nacimiento</label>
+                    
+                </div>
+                <input type="submit"className="Boton" value="Entrar"></input>
+            </div>
+        </form>
     </div>
 }
 
