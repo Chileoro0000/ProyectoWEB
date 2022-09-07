@@ -32,6 +32,7 @@ export function Menu() {
             <nav id='menu'>
                 <input type='checkbox' id='responsive-menu' onclick='updatemenu()' /><label></label>
                 <ul>
+                <li><Link to="/">🚚</Link></li>
                     <li><Link to="/">Inicio</Link></li>
                     <li><Link to="/Carta">Carta</Link></li>
                     <li><Link to="/SobreNosotros">Sobre Nosotros</Link></li>
