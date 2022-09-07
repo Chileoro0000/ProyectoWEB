@@ -2,6 +2,7 @@ const DatosUser = require("../model/DatosUser");
 
 const actualizarDatos = async (req, res) => {
     const { nombre, correo, rut, telefono, sexo, dirrecion, fecha_de_nacimiento } = req.body;
+
     if (!nombre || !correo || !rut || !telefono || !sexo || !dirrecion || !fecha_de_nacimiento) {
         return res.json({ mensaje: "Faltan datos" });
     } else {
@@ -19,8 +20,8 @@ const actualizarDatos = async (req, res) => {
             });
             nuevoUsuario
                 .save()
-                .then((usuario) => {
-                    res.json({ mensaje: "Usuario actualizado correctamente", usuario });
+                .then((nuevoUsuario) => {
+                    res.json({ mensaje: "Usuario actualizado correctamente", nuevoUsuario });
                 })
                 .catch((error) => console.error(error));
         }

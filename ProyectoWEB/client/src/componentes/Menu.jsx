@@ -39,7 +39,7 @@ export function Menu() {
                     <li><Link to="/Login"><button id="BotonCerrar" onClick={handleLogout} >
                         <span class="shadow"></span>
                         <span class="edge"></span>
-                        <span class="front text"> Cerrar sesion</span>
+                        <span class="front text" > Cerrar sesion</span>
                     </button></Link></li>
                 </ul>
             </nav>
@@ -53,9 +53,12 @@ export function Menu() {
                     <li><Link to="/">Inicio</Link></li>
                     <li><Link to="/Carta">Carta</Link></li>
                     <li><Link to="/SobreNosotros">Sobre Nosotros</Link></li>
-                    <li><Link to="/Login">Iniciar sesion</Link></li>
-                    <li><Link to="/Register">Registrarse</Link></li>
+        
+                    <li><Link to="/Login" className="login">Iniciar sesion</Link></li>
+                    <li><Link to="/Register" >Registrarse</Link></li>
+         
                 </ul>
+
             </nav>
         </header>
     }

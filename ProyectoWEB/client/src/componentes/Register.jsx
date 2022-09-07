@@ -14,7 +14,7 @@ export const Register = () => {
 
     const navigate = useNavigate();
 
-    const { nombre, contraseña, correo } = inputs;
+    const { nombre, contraseña, correo, telefono } = inputs;
 
     const HandleChange = (e) => {
         setInputs({ ...inputs, [e.target.name]: e.target.value });
@@ -34,7 +34,7 @@ export const Register = () => {
                 .then((res) => {
                     const { data } = res;
                     setMensaje(data.mensaje);
-                    setInputs({ nombre: "", contraseña: "", correo: "" });
+                    setInputs({ nombre: "", contraseña: "", correo: ""});
                     setTimeout(() => {
                         setMensaje("");
                         navigate("/login");
@@ -59,7 +59,7 @@ export const Register = () => {
                     <h2>Registro</h2>
                     <div >
                         <div >
-                            <label htmlFor="nombre">Nombre</label>
+                            <label htmlFor="nombre">Nombre completo</label>
                             <input
                                 onChange={(e) => HandleChange(e)}
                                 value={nombre}
@@ -100,7 +100,7 @@ export const Register = () => {
                                 autoComplete="off"
                             />
                         </div>
-                    </div>
+                    </div>                    
 
                     <button type="submit">
                         {loading ? "Cargando..." : "Registrarme"}
