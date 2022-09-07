@@ -1,4 +1,4 @@
-const Cart = require("../model/Carro");
+const Cart = require("../model/Carrito");
 const Product = require("../model/productos");
 
 const deleteProduct = async (req, res) => {

@@ -1,4 +1,4 @@
-const Cart = require("../model/Carro");
+const Cart = require("../model/Carrito");
 
 const putProduct = async (req, res) => {
   const { productId } = req.params;

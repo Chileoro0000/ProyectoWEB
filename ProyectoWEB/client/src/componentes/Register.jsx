@@ -8,13 +8,18 @@ export const Register = () => {
         correo: "",
         nombre: "",
         contraseña: "",
+        rut: "",
+        sexo: "",
+        direccion: "",
+        telefono: "",
+        fecha_nacimiento: "",
     });
     const [mensaje, setMensaje] = useState();
     const [loading, setLoading] = useState(false);
 
     const navigate = useNavigate();
 
-    const { nombre, contraseña, correo, telefono } = inputs;
+    const { nombre, contraseña, correo, rut, sexo, direccion, telefono, fecha_nacimiento } = inputs;
 
     const HandleChange = (e) => {
         setInputs({ ...inputs, [e.target.name]: e.target.value });
@@ -22,11 +27,16 @@ export const Register = () => {
 
     const onSubmit = async (e) => {
         e.preventDefault();
-        if (nombre !== "" && contraseña !== "" && correo !== "") {
+        if (nombre !== "" && contraseña !== "" && correo !== "" && rut !== "" && direccion !== "" && telefono !== "" && fecha_nacimiento !== "") {
             const Usuario = {
                 nombre,
                 correo,
                 contraseña,
+                rut,
+                sexo,
+                direccion,
+                telefono,
+                fecha_nacimiento,
             };
             setLoading(true);
             await axios
@@ -34,7 +44,13 @@ export const Register = () => {
                 .then((res) => {
                     const { data } = res;
                     setMensaje(data.mensaje);
-                    setInputs({ nombre: "", contraseña: "", correo: ""});
+                    setInputs({
+                        nombre: "", contraseña: "", correo: "", rut: "",
+                        sexo: "",
+                        direccion: "",
+                        telefono: "",
+                        fecha_nacimiento: ""
+                    });
                     setTimeout(() => {
                         setMensaje("");
                         navigate("/login");
@@ -55,8 +71,10 @@ export const Register = () => {
     return (
         <>
             <div className="ContainerLogin">
+                
                 <form className="FormRegister" onSubmit={(e) => onSubmit(e)}>
-                    <h2>Registro</h2>
+                    <h3 >Registro</h3>
+                    <div></div>
                     <div >
                         <div >
                             <label htmlFor="nombre">Nombre completo</label>
@@ -72,6 +90,86 @@ export const Register = () => {
                         </div>
                     </div>
 
+                    <div >
+                        <div >
+                            <label htmlFor="rut">Rut</label>
+                            <input
+                                onChange={(e) => HandleChange(e)}
+                                value={rut}
+                                name="rut"
+                                id="nombre"
+                                type="text"
+                                placeholder="Nombre..."
+                                autoComplete="off"
+                            />
+                        </div>
+                    </div>
+
+                    <div >
+                        <div >
+                            <label htmlFor="fecha_nacimiento">Fecha de nacimiento</label>
+                            <input
+                                onChange={(e) => HandleChange(e)}
+                                value={fecha_nacimiento}
+                                name="fecha_nacimiento"
+                                id="nombre"
+                                type="text"
+                                placeholder="Fecha de nacimiento..."
+                                autoComplete="off"
+                            />
+                        </div>
+                    </div>
+
+                    <div >
+                        <div >
+                            <label htmlFor="direccion">Direccion</label>
+                            <input
+                                onChange={(e) => HandleChange(e)}
+                                value={direccion}
+                                name="direccion"
+                                id="nombre"
+                                type="text"
+                                placeholder="Direccion..."
+                                autoComplete="off"
+                            />
+                        </div>
+                    </div>
+
+                    <div >
+                        <div >
+                            <label htmlFor="telefono">Telefono</label>
+                            <input
+                                onChange={(e) => HandleChange(e)}
+                                value={telefono}
+                                name="telefono"
+                                id="nombre"
+                                type="text"
+                                placeholder="Telefono..."
+                                autoComplete="off"
+                            />
+                        </div>
+                    </div>
+
+                    <div >
+                        <div>
+                            <div class="select" >
+                                <label>Sexo</label>
+
+                                <select htmlFor="sexo" onChange={(e) => HandleChange(e)}
+                                    value={sexo}
+                                    name="sexo"
+                                    id="nombre">
+                                    <option>--Selecciona--</option>
+                                    <option>Masculino</option>
+                                    <option>Femenino</option>
+                                    <option>No especificar</option>
+                                </select>
+                                <div class="select_arrow">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+     
                     <div >
                         <div >
                             <label htmlFor="correo">Correo</label>
@@ -100,7 +198,8 @@ export const Register = () => {
                                 autoComplete="off"
                             />
                         </div>
-                    </div>                    
+                    </div>
+
 
                     <button type="submit">
                         {loading ? "Cargando..." : "Registrarme"}
@@ -115,6 +214,8 @@ export const Register = () => {
         </>
     )
 }
+
+// nombre, rut, fecha de nacimiento, direccion, telefono, correo, contraseña
 
 export default Register
 

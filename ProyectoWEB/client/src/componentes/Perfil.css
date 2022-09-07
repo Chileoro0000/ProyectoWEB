@@ -1,29 +1,33 @@
+.ContainerList {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
 
-.ContainertextPerfil{
+.ContainertextPerfil {
     margin: 0%;
     font-size: 30px;
     padding-left: 1%;
     border-style: solid;
-    border-color: #FDB273 ;
+    border-color: #FDB273;
     background-color: #FDB273;
 }
 
-.ContainertextPerfil h2{
+.ContainertextPerfil h2 {
     color: white;
 }
 
-.list{
-    list-style: none;   
+.list {
+    list-style: none;
 }
 
-.list li{
+.list li {
     color: black;
     font-size: 30px;
     padding-left: 10px;
 
 }
 
-.list h3{
+.list h3 {
     font-size: 25px;
     padding: 10px 10px 10px 10px;
     margin-top: 7px;
@@ -34,6 +38,83 @@
     border-color: #FDB273;
     color: white;
 }
-.list{
+
+.list {
     list-style-type: none;
+}
+
+.card2 {
+    width: 190px;
+    height: 254px;
+    position: relative;
+    outline: .5em solid #f5f5f5;
+    background: #ff930f;
+    background: linear-gradient(to top, #ff930f 0%, #fffa5c 100%);
+}
+
+.card2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 4;
+    background-color: rgba(80, 64, 44, 0);
+    transition: background-color 1s;
+}
+
+.card-info2 {
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    padding: 1.5em;
+    text-align: center;
+    transition: transform 1s cubic-bezier(0.785, 0.135, 0.150, 0.860);
+}
+
+.card-bio2 {
+    padding: 1.8em;
+    text-align: center;
+    transform: translate(100%, 40%);
+    transition: transform 1s cubic-bezier(0.785, 0.135, 0.150, 0.860);
+}
+
+.card-bio2 p {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.5em;
+}
+
+
+.title2 {
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.title2::after {
+    content: "";
+    display: block;
+    width: 50%;
+    height: 2px;
+    margin: 0 auto 4%;
+    background-color: #000;
+}
+
+.subtitle2 {
+    font-weight: 400;
+    line-height: 1em;
+}
+
+.card2:hover::before {
+    background-color: rgba(80, 64, 44, 0.25);
+}
+
+.card2:hover .card-info2 {
+    transform: translateX(-100%);
+}
+
+.card2:hover .card-bio2 {
+    transform: translate(0, 40%);
+    opacity: 1;
 }

@@ -3,6 +3,8 @@
     border-radius: 24px;
     padding: 40px;
     position: fixed;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -16,10 +18,10 @@
     border: 0;
     background: none;
     display: block;
-    margin: 20px auto;
+    margin: 30px 10px;
     text-align: center;
     border: 2px solid white;
-    padding: 14px 10px;
+    padding: 14px 20px;
     width: 200px;
     outline: none;
     color: white;
@@ -33,11 +35,11 @@
 }
 
 button {
-    padding: 2.3em 3em;
-    font-size: 12px;
+    /* padding: 10px 10px; */
+    font-size: 19px;
+    font-family: Arapey;
     text-transform: uppercase;
-    letter-spacing: 2.5px;
-    font-weight: 500;
+    letter-spacing: 2px;
     color: #000;
     background-color: #fff;
     border: none;
@@ -50,4 +52,54 @@ button {
 
 .ContainerLogin{
     width: 100%;
+}
+
+.select {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    
+}    .select select {
+        font-family: 'Arial';
+        display: inline-block;
+        width: 100%;
+        cursor: pointer;
+        margin-top: 35px;
+        padding: 9px 15px;
+        outline: 0;
+        border: 2.5px solid #ffffff;
+        border-radius: 30px;
+        background: #000000;
+        color: #ffffff;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+    }
+        .select select::-ms-expand {
+            display: none;
+        }
+        .select select:hover,
+        .select select:focus {
+            color: #fffefe;
+            background: #474747;
+        }
+        .select select:disabled {
+            opacity: 0.5;
+            pointer-events: none;
+        }
+.select_arrow {
+    position: absolute;
+    bottom: 15px;
+    right: 27px;
+    pointer-events: none;
+    border-style: solid;
+    border-width: 8px 5px 0px 5px;
+    border-color: #ffffff transparent transparent transparent;
+}
+.select select:hover ~ .select_arrow,
+.select select:focus ~ .select_arrow {
+    border-top-color: #000000;
+}
+.select select:disabled ~ .select_arrow {
+    border-top-color: #474747;
 }
