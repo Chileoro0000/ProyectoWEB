@@ -3,12 +3,12 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const productosSchema = new Schema({
-	id: Number,
-	tipo: String,
-	nombre: String,
-	ingredientes: Array,
-	imagenURL: String,
-	EnCarro: {type: Boolean, default: false}
+	tipo: {type: String, required: true},
+	nombre: {type: String, required: true},
+	ingredientes: {type: Array, required: true},
+	precio: {type: Number, required: true},
+	imagenURL: {type: String, required: true},
+	EnCarro: {type: Boolean, default: false},
 })
 
 

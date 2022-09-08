@@ -50,7 +50,7 @@ export const Login = () => {
     return (
         <>
             <div className="ContainerLogin">
-                <form className="FormRegister" onSubmit={(e) => onSubmit(e)}>
+                <form className="FormLogin" onSubmit={(e) => onSubmit(e)}>
                     <h2>Iniciar sesion</h2>
                     <div >
                         <div >
@@ -82,7 +82,7 @@ export const Login = () => {
                         </div>
                     </div>
                     
-                    <button type="submit">
+                    <button type="submit" >
                         {loading ? "Cargando..." : "Iniciar Sesión"}
                     </button>
                     <p>

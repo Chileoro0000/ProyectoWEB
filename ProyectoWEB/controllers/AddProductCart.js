@@ -1,17 +1,17 @@
-const Cart = require("../model/Carrito");
+const Cart = require("../model/Carro");
 const Product = require("../model/productos");
 
 const addProductCart = async (req, res) => {
-  const { name, img, price } = req.body;
+  const { tipo, nombre, ingredientes, imagenURL, precio } = req.body;
 
   /* Nos fijamos si tenemos el producto */
-  const estaEnProducts = await Product.findOne({ name });
+  const estaEnProducts = await Product.findOne({ tipo, nombre });
 
   /* Nos fijamos si todos los campos vienen con info */
-  const noEstaVacio = name !== "" && img !== "" && price !== "";
+  const noEstaVacio = tipo != "" && nombre !== "" && ingredientes !== "" && imagenURL !== "" && precio !== "";
 
   /* Nos fijamos si el producto ya esta en el carrito */
-  const estaEnElCarrito = await Cart.findOne({ name });
+  const estaEnElCarrito = await Cart.findOne({ tipo, nombre });
 
   /* Si no tenemos el producto */
   if (!estaEnProducts) {
@@ -21,16 +21,16 @@ const addProductCart = async (req, res) => {
 
     /* Si nos envian algo y no esta en el carrito lo agregamos */
   } else if (noEstaVacio && !estaEnElCarrito) {
-    const newProductInCart = new Cart({ name, img, price, amount: 1 });
+    const newProductEnCarro = new Cart({ tipo, nombre, ingredientes, imagenURL,  cantidad: 1, precio});
 
-    /* Y actualizamos la prop inCart: true en nuestros productos */
+    /* Y actualizamos la prop EnCarro: true en nuestros productos */
     await Product.findByIdAndUpdate(
       estaEnProducts?._id,
-      { inCart: true, name, img, price },
+      { EnCarro: true, tipo, nombre, ingredientes, precio, imagenURL },
       { new: true }
     )
       .then((product) => {
-        newProductInCart.save();
+        newProductEnCarro.save();
         res.json({
           mensaje: `El producto fue agregado al carrito`,
           product,

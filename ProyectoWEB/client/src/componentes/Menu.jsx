@@ -28,11 +28,11 @@ export function Menu() {
 
     if (token) {
         return <header>
-            <h3 id="LOGO">FukuSuke</h3>
+           
             <nav id='menu'>
                 <input type='checkbox' id='responsive-menu' onclick='updatemenu()' /><label></label>
                 <ul>
-                <li><Link to="/">🚚</Link></li>
+                    <li><Link to="/">🚚</Link></li>
                     <li><Link to="/">Inicio</Link></li>
                     <li><Link to="/Carta">Carta</Link></li>
                     <li><Link to="/SobreNosotros">Sobre Nosotros</Link></li>
@@ -44,24 +44,44 @@ export function Menu() {
                     </button></Link></li>
                 </ul>
             </nav>
+            <h3 id="LOGO">FukuSuke</h3>
         </header>
     } else {
         return <header>
-            <h3 id="LOGO">FukuSuke</h3>
+            <h2 id="LOGO">FukuSuke</h2>
             <nav id='menu'>
                 <input type='checkbox' id='responsive-menu' onclick='updatemenu()' /><label></label>
                 <ul>
+                    <li><Link to="/">🚚</Link></li>
                     <li><Link to="/">Inicio</Link></li>
                     <li><Link to="/Carta">Carta</Link></li>
                     <li><Link to="/SobreNosotros">Sobre Nosotros</Link></li>
         
+                    
+                </ul>
+                <ul className="second">
                     <li><Link to="/Login" className="login">Iniciar sesion</Link></li>
                     <li><Link to="/Register" >Registrarse</Link></li>
-         
                 </ul>
-
             </nav>
         </header>
     }
 
 }
+
+
+{/* <nav className="Menu">
+                <input type='checkbox' id='responsive-menu' onclick='updatemenu()' /><label></label>
+                <Link to="/">Inicio</Link>
+                <Link to="/Carta">Carta</Link>
+                <Link to="/SobreNosotros">Sobre Nosotros</Link>   
+            </nav>
+            <a className="logo">
+                <input type='checkbox' id='responsive-menu' onclick='updatemenu()' /><label></label>
+                <nav className="inicioRegister">
+                    <Link to="/Login" className="login">Iniciar sesion</Link>
+                    <Link to="/Register" >Registrarse</Link>
+                </nav>
+                <img src="logo.png" alt="Logo"/>
+                <h2 className="nombreComp">Fukusuke</h2>
+            </a> */}

@@ -11,10 +11,6 @@ header {
 	clear: both;
 }
 
-.login{
-	margin-left: 70rem;
-}
-
 #BotonCerrar {
 	position: relative;
 	border: none;
@@ -266,3 +262,4 @@ header {
 		display: block
 	}
 }
+

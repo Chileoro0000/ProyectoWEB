@@ -3,12 +3,14 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const CarroSchema = new Schema({
-	nombre: String,
-	img: {type: String, required: true},
-	monto: {type: Number, required: true},
+	tipo: {type: String, required: true},
+	nombre: {type: String, required: true},
+	ingredientes: {type: Array, required: true},
+	imagenURL: {type: String, required: true},
+	cantidad: {type: Number, required: true},
     precio: {type: Number, required: true},
 })
 
 //Se crea un modelo
-const Carrito = mongoose.model("Carrito", CarroSchema)
-module.exports = Carrito
+const Carro = mongoose.model("Carro", CarroSchema)
+module.exports = Carro

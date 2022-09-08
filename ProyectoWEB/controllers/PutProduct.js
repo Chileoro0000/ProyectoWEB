@@ -1,4 +1,4 @@
-const Cart = require("../model/Carrito");
+const Cart = require("../model/Carro");
 
 const putProduct = async (req, res) => {
   const { productId } = req.params;
@@ -14,26 +14,26 @@ const putProduct = async (req, res) => {
 
     /* Si esta el producto en el carrito y quiero agregar */
   } else if (productBuscado && query === "add") {
-    body.amount = body.amount + 1;
+    body.cantidad = body.cantidad + 1;
 
     await Cart.findByIdAndUpdate(productId, body, {
       new: true,
     }).then((product) => {
       res.json({
-        mensaje: `El producto: ${product.name} fue actualizado`,
+        mensaje: `El producto: ${product.nombre} fue actualizado`,
         product,
       });
     });
 
     /* Si esta el producto en el carrito y quiero sacar */
   } else if (productBuscado && query === "del") {
-    body.amount = body.amount - 1;
+    body.cantidad = body.cantidad - 1;
 
     await Cart.findByIdAndUpdate(productId, body, {
       new: true,
     }).then((product) =>
       res.json({
-        mensaje: `El producto: ${product.name} fue actualizado`,
+        mensaje: `El producto: ${product.nombre} fue actualizado`,
         product,
       })
     );

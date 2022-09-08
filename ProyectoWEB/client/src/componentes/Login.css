@@ -4,6 +4,41 @@
 
 }
 
+.FormLogin{
+    float: left;
+    margin: auto;
+    box-sizing: border-box  ;
+    border-radius: 24px;
+    padding: 40px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+
+.FormLogin input[type = "text"], .FormLogin input[type = "password"], .FormLogin input[type = "email"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 30px 10px;
+    text-align: center;
+    border: 2px solid white;
+    padding: 14px 20px;
+    width: 200px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+
+.FormLogin input[type = "text"]:focus, .FormLogin input[type = "password"]:focus, .FormLogin input[type = "email"]:focus{
+    width: 270px;
+
+}
 .ribbon {
     width: 506px;
     position: absolute;
@@ -77,4 +112,20 @@
     margin-bottom:2px;
     border-top: 1px dashed rgba(0, 0, 0, 0.2);
     box-shadow: 0px 0px 2px rgba(255, 255, 255, 0.3);
+}
+
+button{
+    /* padding: 10px 10px; */
+    font-size: 19px;
+    font-family: Arapey;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
 }

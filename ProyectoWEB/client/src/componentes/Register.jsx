@@ -70,10 +70,10 @@ export const Register = () => {
 
     return (
         <>
-            <div className="ContainerLogin">
+            <div className="ContainerRegister">
                 
                 <form className="FormRegister" onSubmit={(e) => onSubmit(e)}>
-                    <h3 >Registro</h3>
+                    <h3 className="textoH3">Registro</h3>
                     <div></div>
                     <div >
                         <div >
@@ -99,7 +99,7 @@ export const Register = () => {
                                 name="rut"
                                 id="nombre"
                                 type="text"
-                                placeholder="Nombre..."
+                                placeholder="11.222.333-0"
                                 autoComplete="off"
                             />
                         </div>
@@ -113,8 +113,8 @@ export const Register = () => {
                                 value={fecha_nacimiento}
                                 name="fecha_nacimiento"
                                 id="nombre"
-                                type="text"
-                                placeholder="Fecha de nacimiento..."
+                                type="date"
+                                placeholder="01/01/1999"
                                 autoComplete="off"
                             />
                         </div>
@@ -179,7 +179,7 @@ export const Register = () => {
                                 name="correo"
                                 id="correo"
                                 type="email"
-                                placeholder="Correo..."
+                                placeholder="example@mail.com"
                                 autoComplete="off"
                             />
                         </div>
@@ -194,14 +194,14 @@ export const Register = () => {
                                 name="contraseña"
                                 id="contraseña"
                                 type="password"
-                                placeholder="Contraseña..."
+                                placeholder="*******"
                                 autoComplete="off"
                             />
                         </div>
                     </div>
 
 
-                    <button type="submit">
+                    <button type="submit" className="boton">
                         {loading ? "Cargando..." : "Registrarme"}
                     </button>
                     <p>
@@ -210,7 +210,9 @@ export const Register = () => {
                     </p>
                 </form>
             </div>
+            <div className="mensaje">     
             {mensaje && <div >{mensaje}</div>}
+            </div>
         </>
     )
 }

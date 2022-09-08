@@ -1,4 +1,4 @@
-const Cart = require("../model/Carrito");
+const Cart = require("../model/Carro");
 const Product = require("../model/productos");
 
 const deleteProduct = async (req, res) => {
@@ -8,8 +8,8 @@ const deleteProduct = async (req, res) => {
   const productInCart = await Cart.findById(productId);
 
   /* Buscamos el producto en nuestra DB por el nombre del que esta en el carrito */
-  const { name, img, price, _id } = await Product.findOne({
-    name: productInCart.name,
+  const { tipo, nombre, ingredientes, imagenURL, precio, _id } = await Product.findOne({
+    tipo:productInCart.tipo ,nombre: productInCart.nombre, 
   });
 
   /* Buscamos y eliminamos el producto con la id */
@@ -21,12 +21,12 @@ const deleteProduct = async (req, res) => {
   /* Y el new para devolver el producto editado */
   await Product.findByIdAndUpdate(
     _id,
-    { inCart: false, name, img, price },
+    { EnCarro: false, tipo, ingredientes, nombre, imagenURL, precio },
     { new: true }
   )
     .then((product) => {
       res.json({
-        mensaje: `El producto ${product.name} fue eliminado del carrito`,
+        mensaje: `El producto ${product.nombre} fue eliminado del carrito`,
       });
     })
     .catch((error) => res.json({ mensaje: "Hubo un error" }));
