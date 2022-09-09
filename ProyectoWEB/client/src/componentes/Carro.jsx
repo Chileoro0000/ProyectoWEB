@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react";
-import { ItemCart } from "../ItemCart";
-import CartContext from "../../context/CartContext";
-import styles from "./styles.module.scss";
+import { ItemCart } from "./ItemCart";
+import CartContext from "../context/CartContext";
+//Error encontrado, esta en ITEM CART Y CART CONTEXT
 
 const Cart = () => {
   /* Creamos 2 estados, uno para ver si el carrito esta abierto o no 
@@ -26,15 +26,15 @@ const Cart = () => {
   );
 
   return (
-    <div className={styles.cartContainer}>
+    <div >
       <div
         onClick={() => setCartOpen(!cartOpen)}
-        className={styles.buttonCartContainer}
+
       >
-        <div className={styles.buttonCart}>
+        <div >
           {!cartOpen ? (
             <svg
-              className={styles.open}
+         
               width={"35px"}
               viewBox="0 0 30 27"
               fill="none"
@@ -69,25 +69,25 @@ const Cart = () => {
           )}
         </div>
         {!cartOpen && (
-          <div className={styles.productsNumber}>{productsLength}</div>
+          <div>{productsLength}</div>
         )}
       </div>
 
       {cartItems && cartOpen && (
-        <div className={styles.cart}>
+        <div >
           <h2>Tu carrito</h2>
 
           {cartItems.length === 0 ? (
-            <p className={styles.cartVacio}>Tu carrito esta vacio</p>
+            <p >Tu carrito esta vacio</p>
           ) : (
-            <div className={styles.productsContainer}>
+            <div >
               {cartItems.map((item, i) => (
                 <ItemCart key={i} item={item} />
               ))}
             </div>
           )}
 
-          <h2 className={styles.total}>Total: ${total}</h2>
+          <h2 >Total: ${total}</h2>
         </div>
       )}
     </div>

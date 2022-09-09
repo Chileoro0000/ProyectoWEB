@@ -2,6 +2,7 @@ import { useState } from "react"
 import "./CartaPage.css"
 import { Menu } from "../../componentes/Menu"
 import { Footer } from "../../componentes/Footer"
+import Cart from "../../componentes/Carro"
 
 
 const CartaPage = () => {
@@ -16,6 +17,8 @@ const CartaPage = () => {
     return (
       <div>
         <Menu/>
+        <Cart/>
+        
         <br></br>
         <h2 id="textoCarta">CARTA</h2>
         <div className="contenedorCartas">

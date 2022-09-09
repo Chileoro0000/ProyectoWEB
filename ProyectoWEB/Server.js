@@ -28,6 +28,7 @@ app.post("/login", controllers.login);
 
 
 //Carro
+app.get("/TodosLosProductos", controllers.GetProduct);
 app.get("/productos-carro", controllers.GetProductCart);
 app.post("/productos-carro", controllers.AddProductCart);
 app.put("/productos-carro/:productId", controllers.PutProduct);
