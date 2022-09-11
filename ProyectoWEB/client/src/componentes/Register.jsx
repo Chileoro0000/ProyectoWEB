@@ -1,9 +1,19 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom";
 import "./Register.css"
+import firebaseApp from "../firebase/firebaseConfig" 
+import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged} from "firebase/auth"
+const auth = getAuth(firebaseApp)
 
 export const Register = () => {
     const axios = require('axios');
+
+
+
+
+
+
+
     const [inputs, setInputs] = useState({
         correo: "",
         nombre: "",
@@ -65,13 +75,15 @@ export const Register = () => {
                 });
 
             setLoading(false);
+            createUserWithEmailAndPassword(auth, correo, contraseña);
         }
     };
+
 
     return (
         <>
             <div className="ContainerRegister">
-                
+
                 <form className="FormRegister" onSubmit={(e) => onSubmit(e)}>
                     <h3 className="textoH3">Registro</h3>
                     <div></div>
@@ -169,7 +181,7 @@ export const Register = () => {
                             </div>
                         </div>
                     </div>
-     
+
                     <div >
                         <div >
                             <label htmlFor="correo">Correo</label>
@@ -210,8 +222,8 @@ export const Register = () => {
                     </p>
                 </form>
             </div>
-            <div className="mensaje">     
-            {mensaje && <div >{mensaje}</div>}
+            <div className="mensaje">
+                {mensaje && <div >{mensaje}</div>}
             </div>
         </>
     )

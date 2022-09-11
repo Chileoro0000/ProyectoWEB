@@ -17,7 +17,7 @@ const CartaPage = () => {
     return (
       <div>
         <Menu/>
-        <Cart/>
+    
         
         <br></br>
         <h2 id="textoCarta">CARTA</h2>
