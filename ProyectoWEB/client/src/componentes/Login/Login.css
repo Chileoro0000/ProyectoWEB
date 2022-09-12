@@ -35,10 +35,7 @@
     transition: 0.25s;
 }
 
-.FormLogin input[type = "text"]:focus, .FormLogin input[type = "password"]:focus, .FormLogin input[type = "email"]:focus{
-    width: 270px;
 
-}
 .ribbon {
     width: 506px;
     position: absolute;

@@ -1,6 +1,6 @@
-import { Menu } from "../../componentes/Menu"
-import Login from "../../componentes/Login"
-import { Footer } from "../../componentes/Footer"
+import { Menu } from "../../componentes/Menu/Menu"
+import Login from "../../componentes/Login/Login"
+import { Footer } from "../../componentes/Footer/Footer"
 
 const LoginPage = () =>{
     return (

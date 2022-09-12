@@ -1,4 +1,4 @@
-import "./Footer.css"
+
 export function Compras() {
     return <div>
         <table>

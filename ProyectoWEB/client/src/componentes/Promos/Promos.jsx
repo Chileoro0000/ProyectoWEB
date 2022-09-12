@@ -1,7 +1,7 @@
 import { useState } from "react"
 import "./Promos.css"
-import { Menu } from "./Menu"
-import { Footer } from "./Footer"
+import { Menu } from "../Menu/Menu"
+
 export function Promos() {    
     const [ Promos, setPromos ] = useState([])
     const LoadPromos  = () => {

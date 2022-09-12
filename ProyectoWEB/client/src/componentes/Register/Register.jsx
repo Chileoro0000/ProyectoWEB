@@ -1,19 +1,12 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom";
 import "./Register.css"
-import firebaseApp from "../firebase/firebaseConfig" 
-import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged} from "firebase/auth"
+import firebaseApp from "../../firebase/firebaseConfig"
+import { createUserWithEmailAndPassword, getAuth} from "firebase/auth"
 const auth = getAuth(firebaseApp)
 
 export const Register = () => {
     const axios = require('axios');
-
-
-
-
-
-
-
     const [inputs, setInputs] = useState({
         correo: "",
         nombre: "",
@@ -216,7 +209,7 @@ export const Register = () => {
                     <button type="submit" className="boton">
                         {loading ? "Cargando..." : "Registrarme"}
                     </button>
-                    <p>
+                    <p className="LinkToLogin">
                         Ya tienes una cuenta?{" "}
                         <b onClick={() => navigate("/login")}>Iniciar Sesión</b>
                     </p>

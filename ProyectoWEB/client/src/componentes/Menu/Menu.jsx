@@ -43,8 +43,8 @@ export function Menu() {
                         <span class="front text" > Cerrar sesion</span>
                     </button></Link></li>
                 </ul>
+                <h3 id="LOGO">FukuSuke</h3>
             </nav>
-            <h3 id="LOGO">FukuSuke</h3>
         </header>
     } else {
         return <header>
@@ -56,8 +56,6 @@ export function Menu() {
                     <li><Link to="/">Inicio</Link></li>
                     <li><Link to="/Carta">Carta</Link></li>
                     <li><Link to="/SobreNosotros">Sobre Nosotros</Link></li>
-        
-                    
                 </ul>
                 <ul className="second">
                     <li><Link to="/Login" className="login">Iniciar sesion</Link></li>

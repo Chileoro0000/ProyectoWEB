@@ -1,7 +1,5 @@
-.header
-
-#TextoSobre{
-	text-align: center;
+.header #TextoSobre {
+    text-align: center;
 }
 
 #TextoSobre {
@@ -9,12 +7,12 @@
     background-color: orange;
 }
 
-div h1{
-	text-align: center;
-	font-family: 'Times New Roman', Times, serif;
-	font-size: 3rem;
-	transition: box-shadow 0.3s ease;
-	margin: 1rem 0;
+div h1 {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 3rem;
+    transition: box-shadow 0.3s ease;
+    margin: 1rem 0;
     border-radius: 1rem;
     padding: 0.5rem;
 }
@@ -31,11 +29,13 @@ div section {
     padding: 0.25rem 0;
     width: 100%;
 }
+
 div section:hover {
     box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.3);
 }
 
-div section h1, div section p {
+div section h1,
+div section p {
     margin: 1rem;
 }
 
@@ -48,43 +48,43 @@ footer {
 
 footer section {
     float: right;
-	background-color: #000;
+    background-color: #000;
 }
 
-footer{
+footer {
     margin: 0;
 }
 
-footer a{
+footer a {
     transition: color 0.3 ease;
-    color:white;
+    color: white;
     text-decoration: none;
 }
 
-footer a:hover{
+footer a:hover {
     color: cornflowerblue;
 }
 
 .inicio {
-	border: 3px white solid;
-	border-style: solid;
-	border-color: orange;
-	margin: 10px;
-	border-radius: 10px;
-	border-width: 1px;
+    border: 3px white solid;
+    border-style: solid;
+    border-color: orange;
+    margin: 10px;
+    border-radius: 10px;
+    border-width: 1px;
 }
 
-.correo{
-	border: 3px white solid;
-	border-style: solid;
-	border-color: orange;
-	margin: 10px;
-	border-radius: 10px;
-	border-width: 1px;
+.correo {
+    border: 3px white solid;
+    border-style: solid;
+    border-color: orange;
+    margin: 10px;
+    border-radius: 10px;
+    border-width: 1px;
 }
 
 #position {
-    position:relative ;
+    position: relative;
 }
 
 #foot {
@@ -99,20 +99,72 @@ p {
     text-align: center;
 }
 
-/* 
- * Always set the map height explicitly to define the size of the div element
- * that contains the map. 
- */
- #map {
+#map {
     height: 100%;
-  }
-  
-  /* 
-   * Optional: Makes the sample page fill the window. 
-   */
-  html,
-  body {
+}
+
+html,
+body {
     height: 100%;
     margin: 0;
     padding: 0;
-  }
+}
+
+
+#Containersobre{
+    display: flex;
+    padding-top: 15rem;
+    margin: 2px;
+    padding-bottom: 30rem;
+
+}
+
+
+.card-sobre {
+    width: 12rem;
+    cursor: pointer;
+}
+
+.content-sobre {
+    text-align: center;
+    position: relative;
+    transition: all 2.25s;
+    background-color: rgb(239, 81, 13);
+    padding: 5em;
+    transform-style: preserve-3d;
+}
+
+.card-sobre:hover .content-sobre {
+    transform: rotateY(0.5turn);
+}
+
+.front-sobre,
+.back-sobre {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 2em;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+}
+
+.title-sobre {
+    transform: translateZ(5rem);
+    font-size: 2rem;
+}
+
+.subtitle-sobre {
+    transform: translateZ(2rem);
+}
+
+.back-sobre {
+    transform: rotateY(0.5turn);
+    background-color: #f36500;
+}
+
+.description-sobre {
+    transform: translateZ(3rem);
+}
+

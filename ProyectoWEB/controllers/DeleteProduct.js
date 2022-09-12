@@ -21,7 +21,7 @@ const deleteProduct = async (req, res) => {
   /* Y el new para devolver el producto editado */
   await Product.findByIdAndUpdate(
     _id,
-    { EnCarro: false, tipo, ingredientes, nombre, imagenURL, precio },
+    { EnCarro: false, tipo, nombre, ingredientes, imagenURL, precio },
     { new: true }
   )
     .then((product) => {

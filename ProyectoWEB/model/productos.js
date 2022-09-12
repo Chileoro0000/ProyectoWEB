@@ -6,9 +6,9 @@ const productosSchema = new Schema({
 	tipo: {type: String, required: true},
 	nombre: {type: String, required: true},
 	ingredientes: {type: Array, required: true},
-	precio: {type: Number, required: true},
 	imagenURL: {type: String, required: true},
 	EnCarro: {type: Boolean, default: false},
+	precio: {type: Number, required: true},
 })
 
 

@@ -5,10 +5,9 @@ import axios from "axios";
 const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
-  /* Creamos un estado para el carrito */
+
   const [cartItems, setCartItems] = useState([]);
   const [products, setProducts] = useState([]);
-
   const getProducts = async () => {
     await axios
       .get("http://localhost:5005/TodosLosProductos")
@@ -28,7 +27,7 @@ export const CartProvider = ({ children }) => {
   }, []);
 
   const addItemToCart = async (product) => {
-    const { tipo, nombre, ingredientes, imagenURL, precio } = product;
+    const {tipo, nombre, ingredientes, imagenURL, precio } = product;
 
     await axios.post("http://localhost:5005/productos-carro", { tipo, nombre, ingredientes, imagenURL, precio });
 

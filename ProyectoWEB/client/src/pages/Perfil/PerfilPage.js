@@ -1,7 +1,7 @@
-import { Menu } from "../../componentes/Menu"
-import { Perfil } from "../../componentes/Perfil"
-import { Compras } from "../../componentes/Compras"
-import { Footer } from "../../componentes/Footer"
+import { Menu } from "../../componentes/Menu/Menu"
+import { Perfil } from "../../componentes/Perfil/Perfil"
+import { Compras } from "../../componentes/Carro/Compras"
+import { Footer } from "../../componentes/Footer/Footer"
 import "./PerfilPage.css"
 
 const PerfilPage = () => {

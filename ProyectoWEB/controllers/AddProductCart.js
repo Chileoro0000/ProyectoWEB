@@ -26,7 +26,7 @@ const addProductCart = async (req, res) => {
     /* Y actualizamos la prop EnCarro: true en nuestros productos */
     await Product.findByIdAndUpdate(
       estaEnProducts?._id,
-      { EnCarro: true, tipo, nombre, ingredientes, precio, imagenURL },
+      { EnCarro: true, tipo, nombre, ingredientes, imagenURL, precio },
       { new: true }
     )
       .then((product) => {

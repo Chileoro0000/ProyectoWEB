@@ -1,5 +1,5 @@
-import { Menu } from "../../componentes/Menu"
-import { Register } from "../../componentes/Register"
+import { Menu } from "../../componentes/Menu/Menu"
+import { Register } from "../../componentes/Register/Register"
 
 const RegisterPage = () =>{
     return (
