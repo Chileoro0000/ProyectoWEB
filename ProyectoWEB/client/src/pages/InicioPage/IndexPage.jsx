@@ -10,7 +10,7 @@ const IndexPage = () => {
             <Menu />
             <img id="ImagenEntre" src={ImagenesEntre} />
             <Promos />
-            <div className="ContainerPq"><h2 id="TextPq">¿Por que preferirnos?</h2>
+            {/* <div className="ContainerPq"><h2 id="TextPq">¿Por que preferirnos?</h2>
                 <p>Somos los mejores sushi de Maipu desde 1998, tenemos historia</p>
                 <a target="_blank" href="https://www.instagram.com/fukusuke.matsuo/">
                 <button class="button">
@@ -31,7 +31,7 @@ const IndexPage = () => {
                     <p>Redes Sociales</p>
                 </button>
                 </a>
-            </div>
+            </div> */}
             <Footer />  
             
         </div>
