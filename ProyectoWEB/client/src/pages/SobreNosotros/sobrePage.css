@@ -3,8 +3,9 @@
 }
 
 #TextoSobre {
+    color: white;
     margin: 1;
-    background-color: orange;
+    background-color: rgb(0, 0, 0);
 }
 
 div h1 {
@@ -68,7 +69,7 @@ footer a:hover {
 .inicio {
     border: 3px white solid;
     border-style: solid;
-    border-color: orange;
+    border-color: rgb(0, 0, 0);
     margin: 10px;
     border-radius: 10px;
     border-width: 1px;
@@ -113,23 +114,23 @@ body {
 
 #Containersobre{
     display: flex;
-    padding-top: 15rem;
-    margin: 2px;
-    padding-bottom: 30rem;
-
+    /* padding-top: 15rem; */
+    /* padding-bottom: 30rem; */
+    margin: 10px;
 }
 
 
 .card-sobre {
-    width: 12rem;
+    width: 200rem;
     cursor: pointer;
+    padding: 50px;
 }
 
 .content-sobre {
     text-align: center;
     position: relative;
     transition: all 2.25s;
-    background-color: rgb(239, 81, 13);
+    background-color: rgb(110, 110, 110);
     padding: 5em;
     transform-style: preserve-3d;
 }
@@ -161,10 +162,15 @@ body {
 
 .back-sobre {
     transform: rotateY(0.5turn);
-    background-color: #f36500;
+    background-color: rgb(110, 110, 110);
 }
 
 .description-sobre {
     transform: translateZ(3rem);
 }
 
+.map{
+    flex:1 1 45rem;
+    width: 100%;
+    object-fit: cover;
+}
