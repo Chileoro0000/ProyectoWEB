@@ -37,8 +37,6 @@
 }
 
 #carta{
-    /* width: 200px;
-    height: 285px; */
     width: 200px;
     padding: .8em;
     margin: .8em;
@@ -46,7 +44,6 @@
     border-radius: 20px;
     background: #f5f5f5;
     box-sizing: border-box;
-    /* box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); */
 }
 
 .contenedorCartas{

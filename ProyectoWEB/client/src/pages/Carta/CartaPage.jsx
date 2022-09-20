@@ -19,20 +19,8 @@ const CartaPage = () => {
     const {Imagen, setImagen} = useState();
     const {Precio, setPrecio} = useState();
 
-    // const addItemToCart = async (product) => {
-    //   const {tipo, nombre, ingredientes, imagenURL, precio } = product;
-  
-    //   await axios.post("http://localhost:5005/productos-carro", { tipo, nombre, ingredientes, imagenURL, precio });
-    // };
-
-    // const [productos, setProducts] = useState([]);
-    // const getProducts = async () => {
-    //   await axios
-    //     .get("http://localhost:5005/TodosLosProductos")
-    //     .then(({ data }) => setProducts(data.productos));
-    // };
     LoadProductos()
-    //getProducts()
+    
     return (
       <div>
         <Menu/>
