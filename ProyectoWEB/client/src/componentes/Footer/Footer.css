@@ -4,12 +4,6 @@ footer{
     padding: 50px 0px;
     background-size: cover;
     display: inherit;
-    
-    /*background-color: #d0f0f8;
-    -webkit-mask-image: url("../Images/background-footer.svg");
-    mask-image: url("../Images/background-footer.svg");
-    -webkit-mask-size: cover;
-    mask-size: cover;*/
 }
 
 .container__footer{
@@ -18,7 +12,6 @@ footer{
     justify-content: space-between;
     max-width: 1200px;
     margin: auto;
-    /* margin-top: 100px; */
 }
 
 .box__footer{
