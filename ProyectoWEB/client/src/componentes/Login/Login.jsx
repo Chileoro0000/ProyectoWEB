@@ -93,7 +93,7 @@ export const Login = () => {
             </div>
             {mensaje && <div id="MensajeLogin">{mensaje}</div>} 
         </>
-    ) //Modificar mensaje de login porfis
+    )
 }
 
 export default Login
