@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { ItemCart } from "../Cart/ItemCart";
+import "./Compras.css"
 
 export function Compras() {
-    const [cartOpen, setCartOpen] = useState(false);
+    const [cartOpen, setCartOpen] = useState(true);
     const [productsLength, setProductsLength] = useState(0);
 
     const [cartItems, setCartItems] = useState([]);
@@ -64,7 +65,7 @@ export function Compras() {
         0
     );
 
-    return <div>
+    return <div className="ContainerCarro">
         <div>
             <div
                 onClick={() => setCartOpen(!cartOpen)}

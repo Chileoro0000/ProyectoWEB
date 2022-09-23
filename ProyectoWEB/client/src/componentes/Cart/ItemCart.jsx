@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import "./ItemCart.css"
 
 export function ItemCart({ item }) {
     const [productsLength, setProductsLength] = useState(0);
@@ -61,10 +62,10 @@ export function ItemCart({ item }) {
 
     return (
         <div >
-            <img src={item.img} alt={item.name} />
+            <img className="imagenCarro" src={item.imagenURL} alt={item.nombre} />
             <div>
                 <div >
-                    <p>{item.name}</p>
+                    <p className="nombreCarro" >{item.nombre}</p>
                     <div >
                         <button onClick={() => editItemToCart(item._id, "add", cantidad)}>
                             AGREGAR

@@ -7,6 +7,7 @@ import LoginPage from './pages/Login/LoginPage';
 import PerfilPage from './pages/Perfil/PerfilPage';
 
 import { Routes, Route } from "react-router-dom"
+import Carro from './pages/Carro/Carro';
 
 function App() {
   return (
@@ -18,6 +19,8 @@ function App() {
         <Route path='/Register' element={<RegisterPage />} />
         <Route path='/Login' element={<LoginPage />} />
         <Route path='/Perfil' element={<PerfilPage />} />
+        <Route path='/Carro' element={<Carro />} />
+
       </Routes>
     </div>
 
