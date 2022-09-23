@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom"
 import { useState } from "react";
 import { useEffect } from "react";
 import axios from "axios";
+import { Compras } from "../Carro/Compras";
 
 export function Menu() {
     const [name, setName] = useState();
@@ -28,11 +29,11 @@ export function Menu() {
 
     if (token) {
         return <header>
-           
+
             <nav id='menu'>
                 <input type='checkbox' id='responsive-menu' onclick='updatemenu()' /><label></label>
                 <ul>
-                    <li><Link to="/">🚚</Link></li>
+                    <li><Compras></Compras></li>
                     <li><Link to="/">Inicio</Link></li>
                     <li><Link to="/Carta">Carta</Link></li>
                     <li><Link to="/SobreNosotros">Sobre Nosotros</Link></li>
@@ -52,7 +53,7 @@ export function Menu() {
             <nav id='menu'>
                 <input type='checkbox' id='responsive-menu' onclick='updatemenu()' /><label></label>
                 <ul>
-                    <li><Link to="/">🚚</Link></li>
+                    <li><Compras></Compras></li>
                     <li><Link to="/">Inicio</Link></li>
                     <li><Link to="/Carta">Carta</Link></li>
                     <li><Link to="/SobreNosotros">Sobre Nosotros</Link></li>
