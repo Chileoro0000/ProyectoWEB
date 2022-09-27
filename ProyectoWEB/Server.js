@@ -1,17 +1,12 @@
-//Creo servidor
 const express = require("express");
-//Seguridad del servidor
 const cors = require("cors");
 
-//Conectar con la base de datos
 const db = require("./database/db");
 
-//Controladores de POST
 const controllers = require("./controllers");
 const verifyToken = require("./middlewares/verifyToken");
 
 
-//modelos
 const Producto = require("./model/productos")
 const Promos = require("./model/promos")
 
@@ -19,15 +14,10 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-//Ruteos
-//Usuario
 app.get("/user", verifyToken, controllers.getUserById);
 app.post("/register", controllers.register);
 app.post("/login", controllers.login);
-//app.post("/actDatos", controllers.actualizarDatos);
 
-
-//Carro
 app.get("/TodosLosProductos", controllers.GetProduct);
 app.get("/productos-carro", controllers.GetProductCart);
 app.post("/productos-carro", controllers.AddProductCart);
