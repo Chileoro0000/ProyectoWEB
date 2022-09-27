@@ -1,6 +1,5 @@
-const jwt = require("jsonwebtoken"); //Importo webtoken
+const jwt = require("jsonwebtoken"); 
 
-//Funcion que enlaza el token con el usuario y reponde con el id y nombre de este
 const verifyToken = async (req, res, next) => {
   const token = req.headers["token"];
   if (token) {
