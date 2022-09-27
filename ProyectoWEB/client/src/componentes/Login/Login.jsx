@@ -49,48 +49,41 @@ export const Login = () => {
 
     return (
         <>
-            <div className="ContainerLogin">
-                <form className="FormLogin" onSubmit={(e) => onSubmit(e)}>
-                    <h2>Iniciar sesion</h2>
-                    <div >
-                        <div >
-                            <label htmlFor="correo">Correo</label>
-                            <input
-                                onChange={(e) => HandleChange(e)}
-                                value={correo}
-                                name="correo"
-                                id="correo"
-                                type="email"
-                                placeholder="Correo..."
-                                autoComplete="off"
-                            />
-                        </div>
-                    </div>
+            <form className="formulario_login" onSubmit={(e) => onSubmit(e)}>
+                <h2 className="formulario_tituloLogin">Iniciar sesion</h2>
 
-                    <div >
-                        <div >
-                            <label htmlFor="contraseña">Contraseña</label>
-                            <input
-                                onChange={(e) => HandleChange(e)}
-                                value={contraseña}
-                                name="contraseña"
-                                id="contraseña"
-                                type="password"
-                                placeholder="Contraseña..."
-                                autoComplete="off"
-                            />
-                        </div>
-                    </div>
-                    
-                    <button type="submit" >
-                        {loading ? "Cargando..." : "Iniciar Sesión"}
-                    </button>
-                    <p>
-                        Aun no tienes cuenta?{" "}
-                        <b onClick={() => navigate("/register")}>Registrate!</b>
-                    </p>
-                </form>
-            </div>
+                
+                <input
+                    className="formulario_input"
+                    onChange={(e) => HandleChange(e)}
+                    value={correo}
+                    name="correo"
+                    id="correo"
+                    type="email"
+                    placeholder="Correo..."
+                    autoComplete="off"
+                />
+                <label id="formulario_label" htmlFor="correo">Correo</label>
+                
+                <input
+                    className="formulario_input"
+                    onChange={(e) => HandleChange(e)}
+                    value={contraseña}
+                    name="contraseña"
+                    id="contraseña"
+                    type="password"
+                    placeholder="Contraseña..."
+                    autoComplete="off"
+                />
+                <label id="formulario_label" htmlFor="contraseña">Contraseña</label>
+                <button className="boton" type="submit" >
+                    {loading ? "Cargando..." : "Iniciar Sesión"}
+                </button>
+                <p>
+                    Aun no tienes cuenta?{" "}
+                    <b onClick={() => navigate("/register")}>Registrate!</b>
+                </p>
+            </form>
             {mensaje && <div id="MensajeLogin">{mensaje}</div>} 
         </>
     )

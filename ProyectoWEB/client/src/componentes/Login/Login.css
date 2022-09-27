@@ -1,128 +1,88 @@
-#MensajeLogin{
-    text-align: center;
-    font-size: 20px;
-
-}
-
-.FormLogin{
-    float: left;
+.formulario_login{
+    width: 500px;
+    max-width: 100%;
     margin: auto;
-    box-sizing: border-box  ;
-    border-radius: 24px;
-    padding: 40px;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgb(0, 0, 0);
+    margin-top: 100px;
+    margin-bottom: 10%;
+    padding: 20px;
+    box-shadow: 0 0 20px 1px rgba(0,0,0,0.3);
+    position: sticky;
+}
+
+.formulario_tituloLogin{
     text-align: center;
-    color: white;
-    font-size: 20px;
+    margin-top: 0;
+    color: rgba(0,0,0,0.7);
 }
 
-.FormLogin input[type = "text"], .FormLogin input[type = "password"], .FormLogin input[type = "email"]{
-    border: 0;
-    background: none;
-    display: block;
-    margin: 30px 10px;
-    text-align: center;
-    border: 2px solid white;
-    padding: 14px 20px;
-    width: 200px;
-    outline: none;
-    color: white;
-    border-radius: 24px;
-    transition: 0.25s;
+.formulario_input, .formulario_label{
+    display:  block;
+    width: 90%;
+}
+
+.formulario_input{
+    padding: 20px;
+    background: transparent;
+    border: 1px solid rgba(0,0,0,0.3);
+    margin-bottom: 40px;
 }
 
 
-.ribbon {
-    width: 506px;
+.formulario_input:focus{
+    outline: 1px solid rgba(142, 140, 140, 0.5);
+}
+#formulario_label{
+    padding-left: 15px;
     position: absolute;
-    left: 50%;
-    margin-left: -253px;
-    text-align: center;
-    font-size: 10px !important;
-    background: #000000;
-    background: linear-gradient(to bottom, #000000, #000000);
-    box-shadow: rgba(0,0,0,0.3) 0 1px 1px;
-    font-family: 'Helvetica Neue',Helvetica, sans-serif;
+    margin-top: -120px;
+    z-index: -20;
+    color: rgba(0, 0, 0, 1);
+    transition: all 0.2s;
 }
 
-.ribbon p {
-    font-size: 22px !important;
-    color: #FFFFFF;
-    text-shadow: #D6D6D6 0 1px 0;
-    margin:0px;
-    padding: 9px 10px;
-}
-
-.ribbon:before, .ribbon:after {
-    content: '';
-    position: absolute;
-    display: block;
-    bottom: -1em;
-    border: 1.5em solid #000000;
-    z-index: -1;
-}
-
-.ribbon:before {
-    left: -2em;
-    border-right-width: 1.5em;
-    border-left-color: transparent;
-    box-shadow: rgba(0,0,0,0.4) 1px 1px 1px;
-}
-
-.ribbon:after {
-    right: -2em;
-    border-left-width: 1.5em;
-    border-right-color: transparent;
-    box-shadow: rgba(0,0,0,0.4) -1px 1px 1px;
-}
-
-.ribbon .ribbon-content:before, .ribbon .ribbon-content:after {
-    border-color: #FFFFFF transparent transparent transparent;
-    position: absolute;
-    display: block;
-    border-style: solid;
-    bottom: -1em;
-    content: '';
-}
-
-.ribbon .ribbon-content:before {
-    left: 0;
-    border-width: 1em 0 0 1em;
-}
-
-.ribbon .ribbon-content:after {
-    right: 0;
-    border-width: 1em 1em 0 0;
-}
-
-.ribbon-stitches-top {
-    margin-top:2px;
-    border-top: 1px dashed rgba(0, 0, 0, 0.2);
-    box-shadow: 0px 0px 2px rgba(255, 255, 255, 0.5);
-}
-
-.ribbon-stitches-bottom {
-    margin-bottom:2px;
-    border-top: 1px dashed rgba(0, 0, 0, 0.2);
-    box-shadow: 0px 0px 2px rgba(255, 255, 255, 0.3);
-}
-
-button{
-    /* padding: 10px 10px; */
-    font-size: 19px;
-    font-family: Arapey;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #000;
-    background-color: #fff;
+.boton {
+    height: 3em;
+    width: 8em;
     border: none;
-    border-radius: 45px;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease 0s;
-    cursor: pointer;
-    outline: none;
-}
+    border-radius: 10em;
+    background: #000000;
+    font-size: 17px;
+    color: #ffffff;
+    font-weight: 500;
+   }
+   
+   .boton:hover {
+    animation: shake3856 0.3s linear infinite both;
+   }
+   
+   @keyframes shake3856 {
+    0% {
+     -webkit-transform: translate(0);
+     transform: translate(0);
+    }
+   
+    20% {
+     -webkit-transform: translate(-2px, 2px);
+     transform: translate(-2px, 2px);
+    }
+   
+    40% {
+     -webkit-transform: translate(-2px, -2px);
+     transform: translate(-2px, -2px);
+    }
+   
+    60% {
+     -webkit-transform: translate(2px, 2px);
+     transform: translate(2px, 2px);
+    }
+   
+    80% {
+     -webkit-transform: translate(2px, -2px);
+     transform: translate(2px, -2px);
+    }
+   
+    100% {
+     -webkit-transform: translate(0);
+     transform: translate(0);
+    }
+   }

@@ -6,6 +6,8 @@ import { createUserWithEmailAndPassword, getAuth} from "firebase/auth"
 const auth = getAuth(firebaseApp)
 
 export const Register = () => {
+    
+
     const axios = require('axios');
     const [inputs, setInputs] = useState({
         correo: "",
@@ -71,153 +73,122 @@ export const Register = () => {
             createUserWithEmailAndPassword(auth, correo, contraseña);
         }
     };
-
+    
 
     return (
+        
         <>
-            <div className="ContainerRegister">
+            
 
-                <form className="FormRegister" onSubmit={(e) => onSubmit(e)}>
-                    <h3 className="textoH3">Registro</h3>
-                    <div></div>
-                    <div >
-                        <div >
-                            <label htmlFor="nombre">Nombre completo</label>
-                            <input
-                                onChange={(e) => HandleChange(e)}
-                                value={nombre}
-                                name="nombre"
-                                id="nombre"
-                                type="text"
-                                placeholder="Nombre..."
-                                autoComplete="off"
-                            />
-                        </div>
-                    </div>
+            <form className="formulario_register" onSubmit={(e) => onSubmit(e)}>
+                <h2 className="formulario_tituloRegister">Registro</h2>
 
-                    <div >
-                        <div >
-                            <label htmlFor="rut">Rut</label>
-                            <input
-                                onChange={(e) => HandleChange(e)}
-                                value={rut}
-                                name="rut"
-                                id="nombre"
-                                type="text"
-                                placeholder="11.222.333-0"
-                                autoComplete="off"
-                            />
-                        </div>
-                    </div>
+                        
+                <input
+                    className="formulario_input"
+                    onChange={(e) => HandleChange(e)}
+                    value={nombre}
+                    name="nombre"
+                    type="text"
+                    placeholder="Nombre Apellido Apellido"
+                    autoComplete="off"
+                />
+                <label for="" id="formulario_label" htmlFor="nombre">Nombre completo</label>
 
-                    <div >
-                        <div >
-                            <label htmlFor="fecha_nacimiento">Fecha de nacimiento</label>
-                            <input
-                                onChange={(e) => HandleChange(e)}
-                                value={fecha_nacimiento}
-                                name="fecha_nacimiento"
-                                id="nombre"
-                                type="date"
-                                placeholder="01/01/1999"
-                                autoComplete="off"
-                            />
-                        </div>
-                    </div>
+                
+                <input
+                    className="formulario_input"
+                    onChange={(e) => HandleChange(e)}
+                    value={rut}
+                    name="rut"
+                    type="text"
+                    placeholder="12345678-9"
+                    autoComplete="off"
+                />
+                <label for="" id="formulario_label" htmlFor="rut">Rut</label>
 
-                    <div >
-                        <div >
-                            <label htmlFor="direccion">Direccion</label>
-                            <input
-                                onChange={(e) => HandleChange(e)}
-                                value={direccion}
-                                name="direccion"
-                                id="nombre"
-                                type="text"
-                                placeholder="Direccion..."
-                                autoComplete="off"
-                            />
-                        </div>
-                    </div>
+                
+                <input
+                    className="formulario_input"    
+                    onChange={(e) => HandleChange(e)}
+                    value={fecha_nacimiento}
+                    name="fecha_nacimiento"
+                    type="date"
+                    autoComplete="off"
+                />
+                <label for="" id="formulario_label_nacimiento" htmlFor="fecha_nacimiento">Fecha de nacimiento</label>
 
-                    <div >
-                        <div >
-                            <label htmlFor="telefono">Telefono</label>
-                            <input
-                                onChange={(e) => HandleChange(e)}
-                                value={telefono}
-                                name="telefono"
-                                id="nombre"
-                                type="text"
-                                placeholder="Telefono..."
-                                autoComplete="off"
-                            />
-                        </div>
-                    </div>
+                
+                <input
+                    className="formulario_input"
+                    onChange={(e) => HandleChange(e)}
+                    value={direccion}
+                    name="direccion"
+                    type="text"
+                    placeholder="Ej: Psje/Calle Nxx"
+                    autoComplete="off"
+                />
+                <label for="" id="formulario_label" htmlFor="direccion">Direccion</label>
 
-                    <div >
-                        <div>
-                            <div class="select" >
-                                <label>Sexo</label>
+                
+                <input
+                    className="formulario_input"
+                    onChange={(e) => HandleChange(e)}
+                    value={telefono}
+                    name="telefono"
+                    type="text"
+                    placeholder="+56 91234567"
+                    autoComplete="off"
+                />
+                <label for="" id="formulario_label" htmlFor="telefono">Telefono</label>
+                    
+                <select className="select_formulario_input" htmlFor="sexo" onChange={(e) => HandleChange(e)}
+                        value={sexo}
+                        name="sexo"
+                        > 
+                        <option>--Selecciona--</option>
+                        <option>Masculino</option>
+                        <option>Femenino</option>
+                        <option>No especificar</option>
+                </select>
+                <div class="select_arrow"></div>          
+                <label for="" id="formulario_label" >Sexo</label>
 
-                                <select htmlFor="sexo" onChange={(e) => HandleChange(e)}
-                                    value={sexo}
-                                    name="sexo"
-                                    id="nombre">
-                                    <option>--Selecciona--</option>
-                                    <option>Masculino</option>
-                                    <option>Femenino</option>
-                                    <option>No especificar</option>
-                                </select>
-                                <div class="select_arrow">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <input
+                    className="formulario_input"
+                    onChange={(e) => HandleChange(e)}
+                    value={correo}
+                    name="correo"
+                    type="email"
+                    placeholder="example@ej.com"
+                    autoComplete="off"/>
+                <label for="" id="formulario_label" htmlFor="correo">Correo</label>
 
-                    <div >
-                        <div >
-                            <label htmlFor="correo">Correo</label>
-                            <input
-                                onChange={(e) => HandleChange(e)}
-                                value={correo}
-                                name="correo"
-                                id="correo"
-                                type="email"
-                                placeholder="example@mail.com"
-                                autoComplete="off"
-                            />
-                        </div>
-                    </div>
-
-                    <div >
-                        <div >
-                            <label htmlFor="contraseña">Contraseña</label>
-                            <input
-                                onChange={(e) => HandleChange(e)}
-                                value={contraseña}
-                                name="contraseña"
-                                id="contraseña"
-                                type="password"
-                                placeholder="*******"
-                                autoComplete="off"
-                            />
-                        </div>
-                    </div>
+                
+                <input
+                    className="formulario_input"
+                    onChange={(e) => HandleChange(e)}
+                    value={contraseña}
+                    name="contraseña"
+                    type="password"
+                    placeholder="************"
+                    autoComplete="off" 
+                />
+                <label for="" id="formulario_label" htmlFor="contraseña">Contraseña</label>
 
 
-                    <button type="submit" className="boton">
-                        {loading ? "Cargando..." : "Registrarme"}
-                    </button>
-                    <p className="LinkToLogin">
-                        Ya tienes una cuenta?{" "}
-                        <b onClick={() => navigate("/login")}>Iniciar Sesión</b>
-                    </p>
-                </form>
-            </div>
+                <button type="submit" className="boton_registro">
+                    {loading ? "Cargando..." : "Registrarme"}
+                </button>
+                <p className="LinkToLogin">
+                    Ya tienes una cuenta?{" "}
+                    <b onClick={() => navigate("/login")}>Iniciar Sesión</b>
+                </p>
+            </form>
             <div className="mensaje">
                 {mensaje && <div >{mensaje}</div>}
             </div>
+            
         </>
     )
 }
