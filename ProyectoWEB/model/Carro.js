@@ -11,6 +11,5 @@ const CarroSchema = new Schema({
     precio: {type: Number, required: true},
 })
 
-//Se crea un modelo
 const Carro = mongoose.model("Carro", CarroSchema)
 module.exports = Carro

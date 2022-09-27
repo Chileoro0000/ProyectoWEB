@@ -12,6 +12,5 @@ const productosSchema = new Schema({
 })
 
 
-//Se crea un modelo
 const Producto = mongoose.model("Producto", productosSchema)
 module.exports = Producto

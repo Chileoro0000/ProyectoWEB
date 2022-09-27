@@ -11,6 +11,5 @@ const ofertasSchema = new Schema({
 	imagenURL: String
 })
 
-//Se crea un modelo
 const Ofertas = mongoose.model("Ofertas", ofertasSchema)
 module.exports = Ofertas
