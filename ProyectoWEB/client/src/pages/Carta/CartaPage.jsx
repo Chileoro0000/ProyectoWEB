@@ -67,7 +67,7 @@ const CartaPage = () => {
                 {!eachProducto.EnCarro ? (
                   <button className="button" onClick={() => addItemToCart(eachProducto)}>Agregar al carro</button>
                 ) : (
-                  <button>En el carro</button>
+                  <button  className="button" >En el carro</button>
                 )}
               </div>
             </div>

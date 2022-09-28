@@ -24,7 +24,7 @@ const SobreNosotrosPage = () => {
             <div class="card-sobre">
                 <div class="content-sobre">
                     <div class="front-sobre">
-                        <h3 class="title-sobre">Dato 1</h3>
+                        <h3 class="title-sobre">Descubrir creadores</h3>
                         <p class="subtitle-sobre"></p>
                     </div>
 
@@ -38,13 +38,13 @@ const SobreNosotrosPage = () => {
             <div class="card-sobre">
                 <div class="content-sobre">
                     <div class="front-sobre">
-                        <h3 class="title-sobre">Dato 1</h3>
+                        <h3 class="title-sobre">Nuestra promo mas valorada</h3>
                         <p class="subtitle-sobre"></p>
                     </div>
 
                     <div class="back-sobre">
                         <p class="description-sobre">
-                            Pagina web creada por Gabriel, Tomas, Jean.
+                            La promo de 120 piezas
                         </p>
                     </div>
                 </div>
@@ -52,13 +52,13 @@ const SobreNosotrosPage = () => {
             <div class="card-sobre">
                 <div class="content-sobre">
                     <div class="front-sobre">
-                        <h3 class="title-sobre">Dato 1</h3>
+                        <h3 class="title-sobre">Codigo de descuento</h3>
                         <p class="subtitle-sobre"></p>
                     </div>
 
                     <div class="back-sobre">
                         <p class="description-sobre">
-                            Cool description so you can read it too my friend
+                            #FukoSuke01
                         </p>
                     </div>
                 </div>
