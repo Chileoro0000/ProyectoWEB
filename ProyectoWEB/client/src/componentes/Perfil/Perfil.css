@@ -1,120 +1,120 @@
-.ContainerList {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+body {
+    background-color: #ffffff93
 }
 
-.ContainertextPerfil {
-    margin: 0%;
-    font-size: 30px;
-    padding-left: 1%;
-    border-style: solid;
-    border-color: #FDB273;
-    background-color: #FDB273;
+.padding {
+    padding: 3rem !important
 }
 
-.ContainertextPerfil h2 {
-    color: white;
+.user-card-full {
+    overflow: hidden;
 }
 
-.list {
-    list-style: none;
+.card {
+    border-radius: 5px;
+    -webkit-box-shadow: 0 1px 20px 0 rgba(69,90,100,0.08);
+    box-shadow: 0 1px 20px 0 rgba(69,90,100,0.08);
+    border: none;
+    margin-bottom: 30px;
 }
 
-.list li {
-    color: black;
-    font-size: 30px;
-    padding-left: 10px;
-
+.m-r-0 {
+    margin-right: 0px;
 }
 
-.list h3 {
+.m-l-0 {
+    margin-left: 0px;
+}
+
+.user-card-full .user-profile {
+    border-radius: 5px 0 0 5px;
+}
+
+.bg-c-lite-green {
+        background: grey;
+}
+
+.user-profile {
+    padding: 0px 0;
+}
+
+.card-block {
+    padding: 1.25rem;
+}
+
+.m-b-25 {
+    margin-bottom: 0px;
+}
+
+.img-radius {
+    border-radius: 10px;
+}
+
+h6 {
     font-size: 25px;
-    padding: 10px 10px 10px 10px;
-    margin-top: 7px;
-    background-color: #FDB273;
-    display: inline-flex;
-    background-attachment: fixed;
-    border-style: solid;
-    border-color: #FDB273;
-    color: white;
 }
 
-.list {
-    list-style-type: none;
+.card .card-block p {
+    line-height: 25px;
 }
 
-.card2 {
-    width: 190px;
-    height: 254px;
-    position: relative;
-    outline: .5em solid #f5f5f5;
-    background: #ff930f;
-    background: linear-gradient(to top, #ff930f 0%, #fffa5c 100%);
+.card-block {
+    padding: 1.25rem;
 }
 
-.card2::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 4;
-    background-color: rgba(80, 64, 44, 0);
-    transition: background-color 1s;
+.b-b-default {
+    border-bottom: 1px solid #e0e0e0;
 }
 
-.card-info2 {
-    bottom: 0;
-    position: absolute;
-    width: 100%;
-    padding: 1.5em;
-    text-align: center;
-    transition: transform 1s cubic-bezier(0.785, 0.135, 0.150, 0.860);
+.m-b-20 {
+    margin-bottom: 20px;
 }
 
-.card-bio2 {
-    padding: 1.8em;
-    text-align: center;
-    transform: translate(100%, 40%);
-    transition: transform 1s cubic-bezier(0.785, 0.135, 0.150, 0.860);
+.p-b-5 {
+    padding-bottom: 5px !important;
 }
 
-.card-bio2 p {
-    font-size: 16px;
+.card .card-block p {
+    line-height: 25px;
+}
+
+.m-b-10 {
+    margin-bottom: 10px;
+}
+
+.text-muted {
+    color: #000000 !important;
+    font-size:x-large;
+}
+
+.b-b-default {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.f-w-600 {
     font-weight: 600;
-    line-height: 1.5em;
 }
 
-
-.title2 {
-    font-size: 1.3em;
-    font-weight: bold;
+.m-b-20 {
+    margin-bottom: 20px;
 }
 
-.title2::after {
-    content: "";
-    display: block;
-    width: 50%;
-    height: 2px;
-    margin: 0 auto 4%;
-    background-color: #000;
+.m-t-40 {
+    margin-top: 20px;
 }
 
-.subtitle2 {
-    font-weight: 400;
-    line-height: 1em;
+.p-b-5 {
+    padding-bottom: 5px !important;
 }
 
-.card2:hover::before {
-    background-color: rgba(80, 64, 44, 0.25);
+.m-b-10 {
+    margin-bottom: 10px;
 }
 
-.card2:hover .card-info2 {
-    transform: translateX(-100%);
+.m-t-40 {
+    margin-top: 20px;
 }
 
-.card2:hover .card-bio2 {
-    transform: translate(0, 40%);
-    opacity: 1;
+.f-w-600{
+    font-size: 30px;
 }
