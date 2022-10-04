@@ -113,19 +113,21 @@ export function Compras() {
             </div>
 
             {cartItems && cartOpen && (
-                <div >
+                <div class="carro">
                     <h2>Tu carro</h2>
 
                     {cartItems.length === 0 ? (
                         <p >El carro se encuentra vacio</p>
                     ) : (
-                        <div>
-                            {cartItems.map((item, i) => (
-                                <ItemCart key={i} item={item} />
-                            ))}
-                        </div>
+                        <div class="containerproducto">
+                            <div class="producto">
+                                {cartItems.map ((item, i) => (
+                                    <ItemCart key={i} item={item} />
+                                ))}
+                            </div>
+                        </div>    
                     )}
-                    <h2 >Total: ${total}</h2>
+                    <h2 class="total">Total: ${total}</h2>
                 </div>
             )}
         </div>
