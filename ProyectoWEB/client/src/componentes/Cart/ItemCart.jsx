@@ -61,16 +61,16 @@ export function ItemCart({ item }) {
     const { cantidad } = item;
 
     return (
-        <div >
+        <div className="ContainerCarro">
             <img className="imagenCarro" src={item.imagenURL} alt={item.nombre} />
             <div>
-                <div >
-                    <p className="nombreCarro" >{item.nombre}</p>
+                <div className="carro">
+                    <p  >{item.nombre}</p>
                     <div >
-                        <button onClick={() => editItemToCart(item._id, "add", cantidad)}>
+                        <button className="button" onClick={() => editItemToCart(item._id, "add", cantidad)}>
                             AGREGAR
                         </button>
-                        <button onClick={() => editItemToCart(item._id, "del", cantidad)}>
+                        <button className="button" onClick={() => editItemToCart(item._id, "del", cantidad)}>
                             SACAR
                         </button>
                     </div>
