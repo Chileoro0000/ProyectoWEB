@@ -10,12 +10,12 @@
 
 .carro p {
     color: aliceblue;
-    font-size: x-large;
+    font-size: xx-large;
 }
 
 .carro h2{
     color: aliceblue;
-    font-size: x-large;
+    font-size:xx-large;
 }
 
 .producto {
@@ -51,3 +51,137 @@
     max-width: 1000px;
     margin: auto;
 }
+
+.buttons_cart {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 300px;
+    border-radius: 1em;
+    background-color: #201e1f;
+    border: none;
+    color: rgb(2, 2, 2);
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.amongus1 {
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 0 10px;
+    color: white;
+    text-shadow: 2px 2px rgb(116, 116, 116);
+    text-transform: uppercase;
+    border: solid 2px black;
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-size: 17px;
+    background-color: hsl(49deg 98% 60%);
+    border-radius: 50px;
+    position: relative;
+    overflow: hidden;
+    transition: all .5s ease;
+}
+
+.amongus1:active {
+    transform: scale(.9);
+    transition: all 100ms ease;
+}
+.amongus1 svg{
+    transition: all .5s ease;
+    z-index: 2;
+}
+
+.quitar {
+    transition: all .5s ease;
+    transition-delay: 300ms;
+}
+  
+.amongus1:hover svg {
+    transform: scale(3) translate(50%);
+}
+  
+.ahora2 {
+    position: absolute;
+    left: 0;
+    transform: translateX(-100%);
+    transition: all .5s ease;
+    z-index: 2;
+}
+
+.amongus1:hover .ahora2 {
+    transform: translateX(10px);
+    transition-delay: 300ms;
+}
+
+.amongus1:hover .quitar {
+    transform: translateX(200%);
+    transition-delay: 300ms;
+}
+
+.amongus2 {
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 0 10px;
+    color: white;
+    text-shadow: 2px 2px rgb(116, 116, 116);
+    text-transform: uppercase;
+    border: solid 2px black;
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-size: 17px;
+    background-color: hsl(49deg 98% 60%);
+    border-radius: 50px;
+    position: relative;
+    overflow: hidden;
+    transition: all .5s ease;
+}
+
+.amongus2:active {
+    transform: scale(.9);
+    transition: all 100ms ease;
+}
+.amongus2 svg{
+    transition: all .5s ease;
+    z-index: 2;
+}
+
+.agregar {
+    transition: all .5s ease;
+    transition-delay: 300ms;
+}
+  
+.amongus2:hover svg {
+    transform: scale(3) translate(50%);
+}
+  
+.ahora1 {
+    position: absolute;
+    left: 0;
+    transform: translateX(-100%);
+    transition: all .5s ease;
+    z-index: 2;
+}
+
+.amongus2:hover .ahora1 {
+    transform: translateX(10px);
+    transition-delay: 300ms;
+}
+
+.amongus2:hover .agregar {
+    transform: translateX(200%);
+    transition-delay: 300ms;
+}
+
+
+.itemCantidad {
+    text-align: center;
+}
+
