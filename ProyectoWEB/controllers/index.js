@@ -6,6 +6,7 @@ const DeleteProduct = require("./DeleteProduct")
 const GetProduct = require("./GetProduct")
 const GetProductCart = require("./GetProductCart")
 const PutProduct = require("./PutProduct")
+const AddVentas = require("./AddVentas")
 
 module.exports = {
   register,
@@ -15,5 +16,6 @@ module.exports = {
   DeleteProduct,
   GetProduct,
   GetProductCart,
-  PutProduct
+  PutProduct,
+  AddVentas
 };

@@ -15,8 +15,10 @@ app.use(express.json());
 app.use(cors());
 
 app.get("/user", verifyToken, controllers.getUserById);
+app.post("/Ventas", controllers.AddVentas);
 app.post("/register", controllers.register);
 app.post("/login", controllers.login);
+
 
 app.get("/TodosLosProductos", controllers.GetProduct);
 app.get("/productos-carro", controllers.GetProductCart);
