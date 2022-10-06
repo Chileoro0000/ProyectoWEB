@@ -113,7 +113,7 @@ export function Compras() {
             </div>
 
             {cartItems && cartOpen && (
-                <div class="carro">
+                <div class="carroTitulo">
                     <h2>Tu carro</h2>
 
                     {cartItems.length === 0 ? (
@@ -127,7 +127,10 @@ export function Compras() {
                             </div>
                         </div>    
                     )}
+                    <button class="pagar"> Paga aqui!
+                        </button>
                     <h2 class="total">Total: ${total}</h2>
+                    
                 </div>
             )}
         </div>

@@ -1,0 +1,35 @@
+.carroTitulo {
+    text-align: center;
+    font-size: xx-large;
+}
+
+.pagar {
+    width: 9em;
+    height: 3em;
+    border-radius: 30em;
+    font-size: 15px;
+    font-family: inherit;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    margin: 10px;
+   }
+   
+   .pagar::before {
+    content: '';
+    width: 0;
+    height: 3em;
+    border-radius: 30em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to right, #23e209 0%, #2be705 100%);
+    transition: .5s ease;
+    display: block;
+    z-index: -1;
+   }
+   
+   .pagar:hover::before {
+    width: 9em;
+   }
