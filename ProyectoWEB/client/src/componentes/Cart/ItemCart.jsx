@@ -5,13 +5,6 @@ import "./ItemCart.css"
 export function ItemCart({ item }) {
     const [productsLength, setProductsLength] = useState(0);
     const [cartItems, setCartItems] = useState([]);
-    const [products, setProducts] = useState([]);
-
-    const getProducts = async () => {
-        await axios
-            .get("http://localhost:5005/TodosLosProductos")
-            .then(({ data }) => setProducts(data.products));
-    };
 
     const getProductsCart = async () => {
         return await axios
@@ -19,21 +12,6 @@ export function ItemCart({ item }) {
             .then(({ data }) => setCartItems(data.productsCart))
             .catch((error) => console.error(error));
     };
-
-    useEffect(() => {
-        getProducts();
-        getProductsCart();
-    }, []);
-
-    const addItemToCart = async (product) => {
-        const { tipo, nombre, ingredientes, imagenURL, precio } = product;
-
-        await axios.post("http://localhost:5005/productos-carro", { tipo, nombre, ingredientes, imagenURL, precio });
-
-        getProducts();
-        getProductsCart();
-    };
-
     const editItemToCart = async (id, query, cantidad) => {
         if (query === "del" && cantidad === 1) {
             await axios
@@ -47,9 +25,12 @@ export function ItemCart({ item }) {
                 .then(({ data }) => console.log(data));
         }
 
-        getProducts();
         getProductsCart();
     };
+
+    useEffect(() => {
+        getProductsCart();
+    }, []);
 
     useEffect(() => {
         setProductsLength(
@@ -81,9 +62,9 @@ export function ItemCart({ item }) {
                                 <path d="M15.078,19.043c1.957-0.326,5.122-0.529,4.435,1.304c-0.489,1.304-7.185,2.185-7.185,0.652 C12.328,19.467,15.078,19.043,15.078,19.043z" fill="#e1f5fe"></path>
                             </svg>
                             <span class="ahora2">ahora!</span>
-                            <span class="quitar">Quita</span>
+                            <span class="quitar">Agrega</span>
                         </button>
-                        <button className="amongus2" onClick={() => editItemToCart(item._id, "del", cantidad)}>
+                        <button className="amongus2" onClick={() => editItemToCart(item._id, "del", cantidad)} >
                             {/* AGREGAR */}
                             <svg height="36px" width="36px" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
                                 <rect fill="#fdd835" y="0" x="0" height="36" width="36"></rect>
@@ -97,7 +78,8 @@ export function ItemCart({ item }) {
                                 <path d="M15.078,19.043c1.957-0.326,5.122-0.529,4.435,1.304c-0.489,1.304-7.185,2.185-7.185,0.652 C12.328,19.467,15.078,19.043,15.078,19.043z" fill="#e1f5fe"></path>
                             </svg>
                             <span class="ahora1">ahora!</span>
-                            <span class="agregar">Agrega</span>
+                            <span class="agregar">Quita</span>
+                            
                         </button>
                         
                     </div>
