@@ -34,11 +34,10 @@
 }
 
 .imagenCarro {
+    width: 150px;
     border: 10ch;
     border-radius: 5cm;
 }
-
-
 
 .containerproducto {
     border: 2px;
@@ -49,6 +48,6 @@
     margin: 50px;
     flex-wrap: wrap;
     justify-content: space-between;
-    max-width: 00px;
+    max-width: 1000px;
     margin: auto;
 }
