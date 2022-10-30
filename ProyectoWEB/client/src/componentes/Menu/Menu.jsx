@@ -7,6 +7,7 @@ import { Compras } from "../Carro/Compras";
 
 export function Menu() {
     const [name, setName] = useState();
+    const [es_cajero, setes_cajero] = useState();
 
     const token = localStorage.getItem("token");
 
@@ -18,7 +19,7 @@ export function Menu() {
                         token: token,
                     },
                 })
-                .then(({ data }) => setName(data.nombre))
+                .then(({ data }) => (setName(data.nombre), setes_cajero(data.es_cajero)))
                 .catch((error) => console.error(error));
         }
     }, [token]);
@@ -60,6 +61,7 @@ export function Menu() {
                     <li><Link to="/Carta">Carta</Link></li>
                     <li><Link to="/SobreNosotros">Sobre Nosotros</Link></li>
                     <li><Link to="/Perfil">Perfil</Link></li>
+                    {(es_cajero ? (<li><Link to="/Caja">Caja</Link></li>) : (null)) }
                     <li><Link to="/Login"><button id="BotonCerrar" onClick={handleLogout} >
                         <span class="shadow"></span>
                         <span class="edge"></span>
@@ -109,22 +111,4 @@ export function Menu() {
             </nav>
         </header>
     }
-
 }
-
-
-{/* <nav className="Menu">
-                <input type='checkbox' id='responsive-menu' onclick='updatemenu()' /><label></label>
-                <Link to="/">Inicio</Link>
-                <Link to="/Carta">Carta</Link>
-                <Link to="/SobreNosotros">Sobre Nosotros</Link>   
-            </nav>
-            <a className="logo">
-                <input type='checkbox' id='responsive-menu' onclick='updatemenu()' /><label></label>
-                <nav className="inicioRegister">
-                    <Link to="/Login" className="login">Iniciar sesion</Link>
-                    <Link to="/Register" >Registrarse</Link>
-                </nav>
-                <img src="logo.png" alt="Logo"/>
-                <h2 className="nombreComp">Fukusuke</h2>
-            </a> */}

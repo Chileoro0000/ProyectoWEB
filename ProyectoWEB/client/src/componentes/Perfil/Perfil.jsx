@@ -30,25 +30,6 @@ export function Perfil() {
 
 
     return <div>
-        {/* <div className="ContainertextPerfil">
-            <h2>Tu perfil</h2>
-        </div>
-        <div className="ContainerList">
-            <ul className="list">
-                <li>Nombre</li>
-                <h3>{`${name}`}</h3>
-                <li>Rut</li>
-                <h3>{`${rut}`}</h3>
-                <li>Sexo</li>
-                <h3>{`${sexo}`}</h3>
-                <li>Fecha de nacimiento</li>
-                <h3>{`${fecha_nacimiento}`}</h3>
-                <li>direccion</li>
-                <h3>{`${direccion}`}</h3>
-                <li>Correo</li>
-                <h3>{`${correo}`}</h3>
-            </ul>
-        </div> */}
         <div class="page-content page-container" id="page-content">
             <div class="padding">
                 <div class="row container d-flex justify-content-center">

@@ -9,6 +9,8 @@ const UsuarioSchema = new Schema({
   sexo: { type: String, required: false },
   direccion: { type: String, required: false },
   fecha_nacimiento: { type: String, required: false },
+  es_admin: {type: Boolean, require: false, default: false},
+  es_cajero: {type: Boolean, require: false, default: false},
 });
 
 module.exports = model("Usuario", UsuarioSchema);
