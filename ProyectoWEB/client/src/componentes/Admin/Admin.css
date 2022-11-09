@@ -59,3 +59,18 @@
 .TablaUsuarios td, .botonOpcionesUsuario{
     background-color: rgb(255, 255, 255);
 }
+
+.TablaProductos{
+    width: 100%;
+}
+
+.TablaPedidos{
+    width: 100%;
+}
+
+.TablaPedidos th, td{
+    border: 1px solid;
+    text-align: center;
+    padding: 8px;
+    font-size: 15px;
+}

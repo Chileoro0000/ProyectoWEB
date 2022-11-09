@@ -10,6 +10,9 @@ export function AdmInicio () {
             <div className="navegador">
                 <ul className="navegadorLinks">
                     <li className="linkComponente">
+                        <Link to="">Inicio</Link>
+                    </li>
+                    <li className="linkComponente">
                         <Link to="/GestionDeUsuario">Gestionar Usuario</Link>
                     </li>
                     <li className="linkComponente">

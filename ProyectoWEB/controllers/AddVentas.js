@@ -1,11 +1,11 @@
 const Ventas = require("../model/Ventas");
 
 const AddVentas = async (req, res) => {
-    const { Nombre_id, Fecha, Total } = req.body;
+    const {comprador_id, fecha, total } = req.body;
     const nuevoVenta = new Ventas({
-        Nombre_id,
-        Fecha,
-        Total,
+        comprador_id,
+        fecha,
+        total,
     });
 
     nuevoVenta

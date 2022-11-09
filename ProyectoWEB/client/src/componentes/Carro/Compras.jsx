@@ -4,6 +4,32 @@ import { ItemCart } from "../Cart/ItemCart";
 import "./Compras.css"
 
 export function Compras() {
+       
+    const GenerarPedido = async (total) => {
+        const fecha = new Date();
+        fecha.toLocaleString('es-cl', { year: 'numeric', month: '2-digit', day: '2-digit' });
+        const [comprador_id, setID] = useState();
+
+        const token = localStorage.getItem("token");
+
+        useEffect(() => {
+            if (token) {
+                axios
+                    .get("http://localhost:5005/userID", {
+                        headers: {
+                            token: token,
+                        },
+                    })
+                    .then(({ data }) => (setID(data.rut)))
+                    .catch((error) => console.error(error));
+            }
+        }, [token]);
+
+        await axios.post("http://localhost:5005/Ventas", { comprador_id, fecha, total });
+    };
+    
+    
+    
     const [cartOpen, setCartOpen] = useState(true);
     const [productsLength, setProductsLength] = useState(0);
 
@@ -65,6 +91,9 @@ export function Compras() {
         0
     );
 
+
+    
+
     return <div className="ContainerCarro">
         <div>
             <div
@@ -121,16 +150,17 @@ export function Compras() {
                     ) : (
                         <div class="containerproducto">
                             <div class="producto">
-                                {cartItems.map ((item, i) => (
+                                {cartItems.map((item, i) => (
                                     <ItemCart key={i} item={item} />
                                 ))}
                             </div>
-                        </div>    
+                        </div>
                     )}
-                    <button class="pagar"> Paga aqui!
-                        </button>
+                    ()
+                    <button onSubmit={GenerarPedido(total)} class="pagar"> Paga aqui!
+                    </button>
                     <h2 class="total">Total: ${total}</h2>
-                    
+
                 </div>
             )}
         </div>
