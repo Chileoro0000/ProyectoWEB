@@ -9,12 +9,14 @@ const verifyToken = require("./middlewares/verifyToken");
 
 const Producto = require("./model/productos")
 const Promos = require("./model/promos")
+const Usuarios = require("./model/usuario")
 
 const app = express();
 app.use(express.json());
 app.use(cors());
 
-app.get("/user", verifyToken, controllers.getUserById);
+app.get("/userID", verifyToken, controllers.getUserById);
+
 app.post("/Ventas", controllers.AddVentas);
 app.post("/register", controllers.register);
 app.post("/login", controllers.login);
@@ -48,6 +50,16 @@ app.get('/promos', async (req, res) => {
   }
 })
 
+app.get('/Usuarios', async (req, res) => {
+
+  try{
+    const arrayUsuariosDB = await Usuarios.find()
+    res.json(arrayUsuariosDB)
+
+  } catch (error){
+    console.log(error)
+  }
+})
 const PORT = 5005;
 app.listen(PORT, () => {
   console.log(`Servidor funcionando... hhtps://LocalHost ${PORT}`);

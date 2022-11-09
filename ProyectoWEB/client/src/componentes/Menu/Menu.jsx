@@ -8,18 +8,19 @@ import { Compras } from "../Carro/Compras";
 export function Menu() {
     const [name, setName] = useState();
     const [es_cajero, setes_cajero] = useState();
+    const [es_admin, setes_admin] = useState();
 
     const token = localStorage.getItem("token");
 
     useEffect(() => {
         if (token) {
             axios
-                .get("http://localhost:5005/user", {
+                .get("http://localhost:5005/userID", {
                     headers: {
                         token: token,
                     },
                 })
-                .then(({ data }) => (setName(data.nombre), setes_cajero(data.es_cajero)))
+                .then(({ data }) => (setName(data.nombre), setes_cajero(data.es_cajero ), setes_admin(data.es_admin)))
                 .catch((error) => console.error(error));
         }
     }, [token]);
@@ -61,6 +62,7 @@ export function Menu() {
                     <li><Link to="/Carta">Carta</Link></li>
                     <li><Link to="/SobreNosotros">Sobre Nosotros</Link></li>
                     <li><Link to="/Perfil">Perfil</Link></li>
+                    {(es_admin ? (<li><Link to="/Admin">Administracion</Link></li>) : (null))}
                     {(es_cajero ? (<li><Link to="/Caja">Caja</Link></li>) : (null)) }
                     <li><Link to="/Login"><button id="BotonCerrar" onClick={handleLogout} >
                         <span class="shadow"></span>

@@ -13,4 +13,5 @@ const UsuarioSchema = new Schema({
   es_cajero: {type: Boolean, require: false, default: false},
 });
 
+
 module.exports = model("Usuario", UsuarioSchema);

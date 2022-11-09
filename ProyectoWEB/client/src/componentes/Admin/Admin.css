@@ -1,0 +1,61 @@
+.navbar{
+    background-color: rgb(236, 236, 236);
+    padding: 1rem 2rem;
+    border-bottom: 1px solid gray;
+}
+
+.navegador{
+    
+    height: calc(100vh - 52px);
+    border-right: 1px solid gray;
+    padding-top: 50%;
+}
+
+.navegadorLinks{
+    list-style: none;
+    padding: 4rem 2rem;
+}
+
+.linkComponente{
+    margin-bottom: 4rem;
+    text-decoration: none;
+}
+
+.linkComponente a{
+    text-decoration: none;
+}
+
+.contTabla{
+    width: 100%;
+    min-width: 20%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+
+}
+
+.TablaUsuarios{
+    width: 100%;
+}
+
+.TablaUsuarios th, td{
+    border: 1px solid;
+    text-align: center;
+    padding: 8px;
+    font-size: 15px;
+}
+
+.botonOpcionesUsuario{
+    border: 1px solid;
+    display: flex;
+    justify-content: center;
+    padding: 8px;
+}
+
+.TablaUsuarios th{
+    background-color: rgb(199, 199, 199);
+}
+
+.TablaUsuarios td, .botonOpcionesUsuario{
+    background-color: rgb(255, 255, 255);
+}

@@ -7,6 +7,7 @@ const GetProduct = require("./GetProduct")
 const GetProductCart = require("./GetProductCart")
 const PutProduct = require("./PutProduct")
 const AddVentas = require("./AddVentas")
+const getUser = require("./getUsers")
 
 module.exports = {
   register,
@@ -17,5 +18,6 @@ module.exports = {
   GetProduct,
   GetProductCart,
   PutProduct,
-  AddVentas
+  AddVentas,
+  getUser
 };

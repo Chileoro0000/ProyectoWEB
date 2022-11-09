@@ -207,7 +207,7 @@ header {
 	color: #011044;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
 	#menu {
 		position: relative
 	}

@@ -17,7 +17,7 @@ export function Perfil() {
     useEffect(() => {
         if (token) {
             axios
-                .get("http://localhost:5005/user", {
+                .get("http://localhost:5005/userID", {
                     headers: {
                         token: token,
                     },
