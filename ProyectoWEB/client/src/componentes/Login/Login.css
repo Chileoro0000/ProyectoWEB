@@ -53,6 +53,7 @@
    
    .boton:hover {
     animation: shake3856 0.3s linear infinite both;
+    cursor: pointer;
    }
    
    @keyframes shake3856 {

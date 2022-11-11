@@ -49,6 +49,7 @@ export const Login = () => {
 
     return (
         <>
+            {mensaje && <div id="MensajeLogin">{mensaje}</div>} 
             <form className="formulario_login" onSubmit={(e) => onSubmit(e)}>
                 <h2 className="formulario_tituloLogin">Iniciar sesion</h2>
 
@@ -84,7 +85,6 @@ export const Login = () => {
                     <b onClick={() => navigate("/register")}>Registrate!</b>
                 </p>
             </form>
-            {mensaje && <div id="MensajeLogin">{mensaje}</div>} 
         </>
     )
 }
