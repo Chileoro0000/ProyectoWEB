@@ -1,6 +1,18 @@
+import { useState, useContext } from "react";
+import axios from "axios";
+import { Link } from "react-router-dom";
 import "./MenuCaja.css"
+import { useEffect } from "react";
 
 export function MenuCaja() {
+    const [Ventas, setVentas] = useState([])
+    const LoadVentas= () => {
+        fetch("http://localhost:5005/ventasDia")
+            .then(res => res.json())
+            .then(TodosVentas => setVentas(TodosVentas))
+    }
+
+    LoadVentas()
 
     return <div class="tablapedidos">
         <div id="lista" class="screen">
@@ -13,93 +25,105 @@ export function MenuCaja() {
                     <li><a href=''>Historial de cobros</a></li>
                 </ul>
         </nav>
-        <table border="i" class="tablapedido">
-            <tr>
-                <th>Numero</th>
-                <th>Fecha</th>
-                <th>Rut</th>
-                <th>Total</th>
-            </tr>
-            <tr>
+        <table className="tablapedido">
+            <thead>
+                <tr>
+                    <th scope="col">Id Pedido</th>
+                    <th scope="col">Id Comprador</th>
+                    <th scope="col">Fecha</th>
+                    <th scope="col">Total</th>
+                </tr>
+            </thead>
+            <tbody>
+            {Ventas.map((eachVentas) => (
+                <tr>
+                    <td>{eachVentas._id}</td> 
+                    <td>{eachVentas.comprador_id}</td>
+                    <td>{eachVentas.fecha}</td>
+                    <td>{eachVentas.total}</td>
+                </tr>
+                ))}
+            </tbody>
+            {/* <tr>
+                <td>11.685.879-1</td>
                 <td>1</td>
                 <td>08/11/2022</td>
-                <td>11.685.879-1</td>
                 <td>$19990</td>
                 <button>Confirmar</button>
-                <button class="rechazar">Rechazar</button>
+                <button>Rechazar</button>
             </tr>
             <tr>
-                <td>2</td>
-                <td>09/11/2022</td>
-                <td>19.215.687-1</td>
-                <td>$29990</td>
+                <td>11.685.879-1</td>
+                <td>1</td>
+                <td>08/11/2022</td>
+                <td>$19990</td>
                 <button>Confirmar</button>
-                <button class="rechazar">Rechazar</button>
+                <button>Rechazar</button>
             </tr>
             <tr>
-                <td>3</td>
-                <td>10/11/2022</td>
-                <td>21.275.807-7</td>
-                <td>$59990</td>
+                <td>11.685.879-1</td>
+                <td>1</td>
+                <td>08/11/2022</td>
+                <td>$19990</td>
                 <button>Confirmar</button>
-                <button class="rechazar">Rechazar</button>
+                <button>Rechazar</button>
             </tr>
             <tr>
-                <td>4</td>
-                <td>10/11/2022</td>
-                <td>21.275.807-7</td>
-                <td>$59990</td>
+                <td>11.685.879-1</td>
+                <td>1</td>
+                <td>08/11/2022</td>
+                <td>$19990</td>
                 <button>Confirmar</button>
-                <button class="rechazar">Rechazar</button>
+                <button>Rechazar</button>
             </tr>
             <tr>
-                <td>5</td>
-                <td>10/11/2022</td>
-                <td>21.275.807-7</td>
-                <td>$59990</td>
+                <td>11.685.879-1</td>
+                <td>1</td>
+                <td>08/11/2022</td>
+                <td>$19990</td>
                 <button>Confirmar</button>
-                <button class="rechazar">Rechazar</button>
+                <button>Rechazar</button>
             </tr>
             <tr>
-                <td>6</td>
-                <td>10/11/2022</td>
-                <td>21.275.807-7</td>
-                <td>$59990</td>
+                <td>11.685.879-1</td>
+                <td>1</td>
+                <td>08/11/2022</td>
+                <td>$19990</td>
                 <button>Confirmar</button>
-                <button class="rechazar">Rechazar</button>
+                <button>Rechazar</button>
             </tr>
             <tr>
-                <td>7</td>
-                <td>10/11/2022</td>
-                <td>21.275.807-7</td>
-                <td>$59990</td>
+                <td>11.685.879-1</td>
+                <td>1</td>
+                <td>08/11/2022</td>
+                <td>$19990</td>
                 <button>Confirmar</button>
-                <button class="rechazar">Rechazar</button>
+                <button>Rechazar</button>
             </tr>
             <tr>
-                <td>8</td>
-                <td>10/11/2022</td>
-                <td>21.275.807-7</td>
-                <td>$59990</td>
+                <td>11.685.879-1</td>
+                <td>1</td>
+                <td>08/11/2022</td>
+                <td>$19990</td>
                 <button>Confirmar</button>
-                <button class="rechazar">Rechazar</button>
+                <button>Rechazar</button>
             </tr>
             <tr>
-                <td>9</td>
-                <td>10/11/2022</td>
-                <td>21.275.807-7</td>
-                <td>$59990</td>
+                <td>11.685.879-1</td>
+                <td>1</td>
+                <td>08/11/2022</td>
+                <td>$19990</td>
                 <button>Confirmar</button>
-                <button class="rechazar">Rechazar</button>
+                <button>Rechazar</button>
             </tr>
             <tr>
-                <td>10</td>
-                <td>10/11/2022</td>
-                <td>21.275.807-7</td>
-                <td>$59990</td>
+                <td>11.685.879-1</td>
+                <td>1</td>
+                <td>08/11/2022</td>
+                <td>$19990</td>
                 <button>Confirmar</button>
-                <button class="rechazar">Rechazar</button>
-            </tr>
+                <button>Rechazar</button>
+            </tr> */}
         </table>
     </div>
 }
