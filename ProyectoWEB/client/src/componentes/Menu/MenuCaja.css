@@ -1,5 +1,5 @@
 #menuCaja {
-	background: #CCCCCC;
+	background: #aaaaaa;
 	color: #FFF;
 	height: 45px;
 	padding-left: 18px;
@@ -92,3 +92,45 @@
 	#menuCaja input:checked + label:before {content:"\00d7"}
 	#menuCaja input:checked ~ ul {display:block}
 }
+
+.tablapedidos {
+	background-color: white;
+}
+.screen {
+	font-size: xxx-large;
+	text-align: center;
+}
+
+.tablapedido {
+	background-color: white;
+	border: 1px solid black;
+	width: 700px;
+	color: black;
+	margin: 100px 0px 0px 100px;
+}
+
+.tablapedido button {
+	position: relative;
+	padding: 10px 40px;
+	margin: 1px 10px 0px 10px;
+	float: center;
+	border-radius: 3px;
+	font-size: 20px;
+	color: #FFF;
+	text-decoration: none;
+	background-color: #2ecc71;
+	border: none;
+	border-bottom: 5px solid #27ae60;
+	text-shadow: 0px -2px #27ae60;
+	-webkit-transition: all 0.1s;
+	transition: all 0.1s;
+}
+
+.tablapedido button:hover, button:active {
+	-webkit-transform: translate(0px,5px);
+	-ms-transform: translate(0px,5px);
+	transform: translate(0px,5px);
+	border-bottom: 1px solid #2ecc71;
+}
+
+
