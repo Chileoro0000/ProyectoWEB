@@ -1,116 +1,46 @@
-#menuCaja {
-	background: #aaaaaa;
-	color: #FFF;
-	height: 45px;
-	padding-left: 18px;
-	border-radius: 10px;
-	border: 2px solid #000000;
-}
-#menuCaja ul, #menuCaja li {
-	margin: 0 auto;
-	padding: 0;
-	list-style: none
-}
-#menuCaja ul {
-	width: 100%;
-}
-#menuCaja li {
-	float: left;
-	display: inline;
-	position: relative;
-}
-#menuCaja a {
-	display: block;
-	line-height: 41px;
-	padding: 0 14px;
-	text-decoration: none;
-	color: #000000;
-	font-size: 22px;
-}
-#menuCaja a.dropdown-arrow:after {
-	content: "\25BE";
-	margin-left: 5px;
-}
-#menuCaja li a:hover {
-	color: #CCCCCC;
-	background: #F2F2F2;
-}
-#menuCaja input {
-	display: none;
-	margin: 0;
-	padding: 0;
-	height: 45px;
-	width: 100%;
-	opacity: 0;
-	cursor: pointer
-}
-#menuCaja label {
-	display: none;
-	line-height: 41px;
-	text-align: center;
-	position: absolute;
-	left: 35px
-}
-#menuCaja label:before {
-	font-size: 1.6em;
-	content: "\2261"; 
-	margin-left: 20px;
-}
-#menuCaja ul.sub-menuCajas{
-	height: auto;
-	overflow: hidden;
-	width: 170px;
-	background: #444444;
-	position: absolute;
-	z-index: 99;
-	display: none;
-}
-#menuCaja ul.sub-menuCajas li {
-	display: block;
-	width: 100%;
-}
-#menuCaja ul.sub-menuCajas a {
-	color: #FFFFFF;
-	font-size: 16px;
-}
-#menuCaja li:hover ul.sub-menuCajas {
-	display: block
-}
-#menuCaja ul.sub-menuCajas a:hover{
-	background: #F2F2F2;
-	color: #444444;
-}
-@media screen and (max-width: 800px){
-	#menuCaja {position:relative}
-	#menuCaja ul {background:#111;position:absolute;top:100%;right:0;left:0;z-index:3;height:auto;display:none}
-	#menuCaja ul.sub-menuCajas {width:100%;position:static;}
-	#menuCaja ul.sub-menuCajas a {padding-left:30px;}
-	#menuCaja li {display:block;float:none;width:auto;}
-	#menuCaja input, #menuCaja label {position:absolute;top:0;left:0;display:block}
-	#menuCaja input {z-index:4}
-	#menuCaja input:checked + label {color:white}
-	#menuCaja input:checked + label:before {content:"\00d7"}
-	#menuCaja input:checked ~ ul {display:block}
+.navbar{
+    background-color: rgb(236, 236, 236);
+    padding: 1rem 2rem;
+    border-bottom: 1px solid gray;
 }
 
-.screen {
-	font-size: xxx-large;
-	text-align: center;
+.navegador{
+    
+    height: calc(100vh - 52px);
+    border-right: 1px solid gray;
+    padding-top: 50%;
 }
 
-.tablapedido {
-	width: 100%;
+.navegadorLinks{
+    list-style: none;
+    padding: 4rem 2rem;
 }
 
-.tablapedido th, td{
-	border: 1px solid;
+.linkComponente{
+    margin-bottom: 4rem;
+    text-decoration: none;
+}
+
+.linkComponente a{
+    text-decoration: none;
+}
+
+.contTabla{
+    width: 100%;
+    min-width: 20%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+
+}
+
+.TablaPedidos{
+    width: 100%;
+}
+
+.TablaPedidos th, td{
+    border: 1px solid;
     text-align: center;
     padding: 8px;
     font-size: 15px;
 }
-
-.tablapedido th{
-    background-color: rgb(199, 199, 199);
-}
-
-
