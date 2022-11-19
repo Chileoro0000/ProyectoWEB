@@ -6,6 +6,8 @@ import RegisterPage from './pages/Register/RegisterPage';
 import LoginPage from './pages/Login/LoginPage';
 import PerfilPage from './pages/Perfil/PerfilPage';
 import Caja from './pages/Caja/Caja';
+import MostrarPedidos from './pages/Caja/MostrarPedidos';
+import MostrarPedidosActuales from './pages/Caja/MostrarPedidosActuales';
 import Admin from './pages/Admin/Admin';
 import GestionarPedidos from './pages/Admin/GestionarPedidos';
 import GestionarProductos from './pages/Admin/GestionarProductos';
@@ -17,6 +19,8 @@ import { Link, useParams } from "react-router-dom"
 import { useState } from "react";
 import { useEffect } from "react";
 import axios from "axios";
+import { Pedidos } from './componentes/Menu/Pedidos';
+import { PedidosActuales } from './componentes/Menu/PedidosActuales';
 
 
 function App() {
@@ -52,6 +56,8 @@ function App() {
         <Route path='/Perfil' element={<PerfilPage />} />
         <Route path='/Carro' element={<Carro />} />
         <Route path='/Caja' element={<Caja/>} />
+        <Route path='/MuestraDePedidos' element={<MostrarPedidos/>} />
+        <Route path='/MuestraDePedidosActuales' element={<MostrarPedidosActuales/>} />
       </Routes>
     </div>
   );
