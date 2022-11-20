@@ -5,14 +5,36 @@ import "./Admin.css";
 import { useEffect } from "react";
 
 export function GestionUsuario() {
-    const [Usuarios, setUsuarios] = useState([])
-    const LoadUsers = () => {
-        fetch("http://localhost:5005/Usuarios")
-            .then(res => res.json())
-            .then(TodosUsuarios => setUsuarios(TodosUsuarios))
+    const [ users, setUsers ] = useState([])
+    const [ search, setSearch ] = useState("")
+
+    const API = "http://localhost:5005/Usuarios"
+    const showData = async () =>{
+        const response = await fetch(API)
+        const data = await response.json()
+        console.log(data)
+        setUsers(data)
+    }
+    // Busqueda
+    const searcher = (e) =>{
+        setSearch(e.target.value)
+        console.log(e.target.value)
     }
 
-    LoadUsers()
+    //Filtrado
+    let results = []
+    if(!search)
+    {
+        results = users 
+    }else{
+        results = users.filter( (dato)=>
+            dato.nombre.toLowerCase().includes(search.toLocaleLowerCase())
+        )  
+    }
+    useEffect(()=>{
+        showData()
+    }, [])
+
 
     const borrarUsuario = ()=>{
 
@@ -20,6 +42,7 @@ export function GestionUsuario() {
     return (
         <div className="contTabla">
             <h3 className="TituloUsuario">Usuarios registrados</h3>
+            <input calue={search} onChange={searcher} type="text" placeholder="Buscar Usuarios" className="busqueda"></input>
             <div>
                 <table className="TablaUsuarios">
                     <thead>
@@ -33,7 +56,7 @@ export function GestionUsuario() {
                         </tr>
                     </thead>
                     <tbody>
-                        {Usuarios.map((eachUsers) => (
+                        {results.map((eachUsers) => (
                             <tr>
                                 <td>{eachUsers.rut}</td>
                                 <td>{eachUsers.nombre}</td>

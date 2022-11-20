@@ -8,7 +8,7 @@ export function Compras() {
        
     const GenerarPedido = async (total) => {
         const fecha = new Date();
-        fecha.toLocaleString('es-cl', { year: 'numeric', month: '2-digit', day: '2-digit' });
+        //fecha.toLocaleString('es-cl', { year: 'numeric', month: '2-digit', day: '2-digit' });
         const [comprador_id, setID] = useState();
 
         const token = localStorage.getItem("token");

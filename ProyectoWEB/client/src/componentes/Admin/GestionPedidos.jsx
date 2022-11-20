@@ -7,17 +7,39 @@ import "./Admin.css"
 
 
 export function GestionPedidos () {
-    const [Ventas, setVentas] = useState([])
-    const LoadVentas= () => {
-        fetch("http://localhost:5005/ventasDia")
-            .then(res => res.json())
-            .then(TodosVentas => setVentas(TodosVentas))
+    const [ ventas, setVentas ] = useState([])
+    const [ search, setSearch ] = useState("")
+
+    const API = "http://localhost:5005/ventasDia"
+    const showData = async () =>{
+        const response = await fetch(API)
+        const data = await response.json()
+        setVentas(data)
+    }
+    // Busqueda
+    const searcher = (e) =>{
+        setSearch(e.target.value)
+        console.log(e.target.value)
     }
 
-    LoadVentas()
+    //Filtrado
+    let results = []
+    if(!search)
+    {
+        results = ventas 
+    }else{
+        results = ventas.filter( (dato)=>
+            dato.fecha.toLowerCase().includes(search.toLocaleLowerCase())
+        )  
+    }
+    useEffect(()=>{
+        showData()
+    }, [])
+
     return (
         <div className="contTabla">
             <h3 className="TituloPedidos">Lista de pedidos</h3>
+            <input calue={search} onChange={searcher} type="date" placeholder="Buscar pedido por fecha" className="busqueda"></input>
             <div>
                 <table className="TablaPedidos">
                     <thead>
@@ -29,7 +51,7 @@ export function GestionPedidos () {
                         </tr>
                     </thead>
                     <tbody>
-                    {Ventas.map((eachVentas) => (
+                    {results.map((eachVentas) => (
                             <tr>
                                 <td>{eachVentas._id}</td> 
                                 <td>{eachVentas.comprador_id}</td>

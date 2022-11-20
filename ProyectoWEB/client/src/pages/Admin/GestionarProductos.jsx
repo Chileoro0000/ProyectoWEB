@@ -11,7 +11,9 @@ const GestionarProductos = () => {
         <Menu></Menu>
         <Navbar/>
         <div className="flex">
+            
             <AdmInicio/>
+            
             <GestionProductos/>
         </div>
         

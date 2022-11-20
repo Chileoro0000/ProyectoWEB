@@ -6,17 +6,42 @@ import "./Admin.css"
 
 
 export function GestionProductos() {
-    const [Productos, setProductos] = useState([])
-    const LoadProductos = () => {
-        fetch("http://localhost:5005/productos")
-            .then(res => res.json())
-            .then(TodosProductos => setProductos(TodosProductos))
+
+    const [ products, setProducts ] = useState([])
+    const [ search, setSearch ] = useState("")
+
+    const API = "http://localhost:5005/productos"
+    const showData = async () =>{
+        const response = await fetch(API)
+        const data = await response.json()
+        console.log(data)
+        setProducts(data)
+    }
+    // Busqueda
+    const searcher = (e) =>{
+        setSearch(e.target.value)
+        console.log(e.target.value)
     }
 
-    LoadProductos()
+    //Filtrado
+    let results = []
+    if(!search)
+    {
+        results = products 
+    }else{
+        results = products.filter( (dato)=>
+            dato.nombre.toLowerCase().includes(search.toLocaleLowerCase())
+        )  
+    }
+    useEffect(()=>{
+        showData()
+    }, [])
+    
+
     return (
         <div className="contTabla">
-            <h3 className="TituloProductos">Menu de productos disponibles</h3>
+            <h3 className="TituloProductos">Menu de productos disponibles</h3> 
+            <input calue={search} onChange={searcher} type="text" placeholder="Buscar producto" className="busqueda"></input>
             <div>
                 <table className="TablaProductos">
                     <thead>
@@ -29,12 +54,12 @@ export function GestionProductos() {
                         </tr>
                     </thead>
                     <tbody>
-                        {Productos.map((eachProductos) => (
+                        {results.map((products) => (
                             <tr>
-                                <td>{eachProductos._id}</td>
-                                <td>{eachProductos.nombre}</td>
-                                <td>{eachProductos.tipo}</td>
-                                <td>{eachProductos.ingredientes}</td>
+                                <td>{products._id}</td>
+                                <td>{products.nombre}</td>
+                                <td>{products.tipo}</td>
+                                <td>{products.ingredientes}</td>
                                 <div className="botonOpcionesUsuario">
                                     <button>""</button>
                                 </div>
