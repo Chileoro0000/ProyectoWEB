@@ -62,7 +62,7 @@ export function Menu() {
                     <li><Link to="/Carta">Carta</Link></li>
                     <li><Link to="/SobreNosotros">Sobre Nosotros</Link></li>
                     <li><Link to="/Perfil">Perfil</Link></li>
-                    {(es_admin ? (<li><Link to="/Admin">Administracion</Link></li>) : (null))}
+                    {(es_admin ? (<li><Link to="/GestionDeUsuario">Administracion</Link></li>) : (null))}
                     {(es_cajero ? (<li><Link to="/Caja">Caja</Link></li>) : (null)) }
                     <li><Link to="/Login"><button id="BotonCerrar" onClick={handleLogout} >
                         <span class="shadow"></span>
