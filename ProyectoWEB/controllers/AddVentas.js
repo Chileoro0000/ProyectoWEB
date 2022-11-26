@@ -1,12 +1,15 @@
 const Ventas = require("../model/Ventas");
 
 const AddVentas = async (req, res) => {
-    const {comprador_id, fecha, total } = req.body;
+    const { comprador_id, fecha, total } = req.body;
     const nuevoVenta = new Ventas({
         comprador_id,
         fecha,
         total,
     });
+    if (!comprador_id) {
+        return res.json({ mensaje: "Mal ingreso" })
+    }
 
     nuevoVenta
         .save()
