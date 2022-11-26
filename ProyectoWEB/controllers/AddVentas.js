@@ -10,6 +10,9 @@ const AddVentas = async (req, res) => {
     if (!comprador_id) {
         return res.json({ mensaje: "Mal ingreso" })
     }
+    if (total == 0) {
+        return res.json({ mensaje: "Mal ingreso" })
+    }
 
     nuevoVenta
         .save()

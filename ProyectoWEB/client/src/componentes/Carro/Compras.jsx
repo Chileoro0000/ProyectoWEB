@@ -3,6 +3,7 @@ import axios from "axios";
 import { ItemCart } from "../Cart/ItemCart";
 import "./Compras.css"
 import { Link, useParams } from "react-router-dom"
+import { Confirmacion } from "../Confirmacion/confirmacion";
 
 export function Compras() {
        
@@ -162,10 +163,9 @@ export function Compras() {
                         </div>
                     )}
                     ()
-                    <button onSubmit={GenerarPedido(total)} class="pagar"> Paga aqui!
-                    </button>
+                    <a href="Boleta"><button   onSubmit={GenerarPedido(total)} class="pagar"> Paga aqui!
+                    </button></a>
                     <h2 class="total">Total: ${total}</h2>
-
                 </div>
             )}
         </div>

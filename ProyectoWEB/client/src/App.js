@@ -5,6 +5,8 @@ import SobreNosotrosPage from './pages/SobreNosotros/SobrePage';
 import RegisterPage from './pages/Register/RegisterPage';
 import LoginPage from './pages/Login/LoginPage';
 import PerfilPage from './pages/Perfil/PerfilPage';
+import BoletaPage from './pages/Boleta/Boleta';
+import AnuladoPage from './pages/Anulado/Anulado';
 import Caja from './pages/Caja/Caja';
 import MostrarPedidos from './pages/Caja/MostrarPedidos';
 import MostrarPedidosActuales from './pages/Caja/MostrarPedidosActuales';
@@ -54,6 +56,8 @@ function App() {
         <Route path='/GestionDePedidos' element={<GestionarPedidos />} />
         <Route path='/GestionDeProductos' element={<GestionarProductos />} />
         <Route path='/Perfil' element={<PerfilPage />} />
+        <Route path='/Boleta' element={<BoletaPage />} />
+        <Route path='/Anulado' element={<AnuladoPage />}/>
         <Route path='/Carro' element={<Carro />} />
         <Route path='/Caja' element={<Caja/>} />
         <Route path='/MuestraDePedidos' element={<MostrarPedidos/>} />
