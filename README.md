@@ -1,2 +1,2 @@
 # ProyectoWEB
-Proyecto web MERN
+Proyecto web en MERN, pagina de restaurant de sushi.
